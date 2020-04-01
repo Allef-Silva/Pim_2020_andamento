@@ -42,5 +42,20 @@ namespace PizzariaWinForm
         {
             Application.Exit();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            pnlLogin.Location = new Point(this.Width / 2 - 168, this.Height / 2 - 100);
+        }
+
+        private void pnlLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

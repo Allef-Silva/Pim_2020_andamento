@@ -28,112 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
+            this.pnlLogin = new System.Windows.Forms.Panel();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // pnlLogin
             // 
-            this.groupBox1.Controls.Add(this.txtSenha);
-            this.groupBox1.Controls.Add(this.txtLogin);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 152);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sistema de vendas";
+            this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.Controls.Add(this.txtSenha);
+            this.pnlLogin.Controls.Add(this.txtUsuario);
+            this.pnlLogin.Location = new System.Drawing.Point(157, 131);
+            this.pnlLogin.Name = "pnlLogin";
+            this.pnlLogin.Size = new System.Drawing.Size(336, 200);
+            this.pnlLogin.TabIndex = 0;
+            this.pnlLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlLogin_Paint);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.Black;
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsuario.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtUsuario.Location = new System.Drawing.Point(48, 109);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(272, 13);
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtSenha
             // 
-            this.txtSenha.AcceptsReturn = true;
-            this.txtSenha.BackColor = System.Drawing.SystemColors.Window;
-            this.txtSenha.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSenha.Location = new System.Drawing.Point(10, 100);
+            this.txtSenha.BackColor = System.Drawing.Color.Black;
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtSenha.Location = new System.Drawing.Point(48, 153);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtSenha.TabIndex = 3;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Location = new System.Drawing.Point(13, 49);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(100, 20);
-            this.txtLogin.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Senha";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(22, 171);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Location = new System.Drawing.Point(141, 170);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 2;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(272, 15);
+            this.txtSenha.TabIndex = 1;
+            this.txtSenha.Text = "SENHA";
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(350, 220);
-            this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(651, 489);
+            this.Controls.Add(this.pnlLogin);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmLogin_Load);
+            this.pnlLogin.ResumeLayout(false);
+            this.pnlLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel pnlLogin;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnSair;
     }
 }
