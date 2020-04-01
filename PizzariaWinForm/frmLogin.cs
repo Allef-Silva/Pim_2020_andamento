@@ -57,5 +57,21 @@ namespace PizzariaWinForm
         {
 
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text == "") 
+            {
+                MessageBox.Show("Preencha o Usuário!");
+                txtUsuario.Focus();
+                return;
+            }
+            if (txtSenha.Text == "")
+            {
+                MessageBox.Show("Preencha a Senha!");
+                txtSenha.Focus();
+                return;
+            }
+        }
     }
 }

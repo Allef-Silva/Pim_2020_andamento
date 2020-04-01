@@ -32,12 +32,14 @@
             this.pnlLogin = new System.Windows.Forms.Panel();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
+            this.btnEntrar = new System.Windows.Forms.Button();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogin
             // 
             this.pnlLogin.BackColor = System.Drawing.Color.Transparent;
+            this.pnlLogin.Controls.Add(this.btnEntrar);
             this.pnlLogin.Controls.Add(this.txtSenha);
             this.pnlLogin.Controls.Add(this.txtUsuario);
             this.pnlLogin.Location = new System.Drawing.Point(157, 131);
@@ -55,7 +57,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(272, 13);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.Text = "USUARIO";
+            this.txtUsuario.Text = "USUÁRIO";
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtSenha
@@ -70,6 +72,18 @@
             this.txtSenha.Size = new System.Drawing.Size(272, 15);
             this.txtSenha.TabIndex = 1;
             this.txtSenha.Text = "SENHA";
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Location = new System.Drawing.Point(98, 19);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(143, 61);
+            this.btnEntrar.TabIndex = 2;
+            this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // frmLogin
             // 
@@ -99,5 +113,6 @@
         private System.Windows.Forms.Panel pnlLogin;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.Button btnEntrar;
     }
 }
