@@ -15,23 +15,36 @@ namespace PizzariaWinForm
         public frmProduto()
         {
             InitializeComponent();
-            Produto prod = new Produto();
-            prod.Preencher(cmbRazaoSocial);
+
         }
 
 
-        
-        
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        Produto prod = new Produto();
+        private void RecebendoValor()
         {
 
-            Produto prod = new Produto();
             prod.Descricao = txtNome.Text;
             prod.Preco = decimal.Parse(txtPreco.Text);
             prod.Quantidade = int.Parse(txtQuantidade.Text);
             prod.Fabricante = cmbRazaoSocial.SelectedValue.ToString();
-            
+
+        }
+        private void EsvaziandoValores()
+        {
+            txtId.Text = " ";
+            txtNome.Text = " ";
+            txtPreco.Text = " ";
+            txtQuantidade.Text = " ";
+
+
+
+        }
+
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+            RecebendoValor();
 
 
             if (txtNome.Text == "")
@@ -52,6 +65,7 @@ namespace PizzariaWinForm
             if (txtNome.Text != " " && cmbRazaoSocial.Text != " ")
 
                 prod.Cadastrar();
+            EsvaziandoValores();
 
         }
 
@@ -60,6 +74,46 @@ namespace PizzariaWinForm
             frmMenu menu = new frmMenu();
             this.Hide();
             menu.Show();
+        }
+
+        private void btnExibir_Click(object sender, EventArgs e)
+        {
+            prod.Dados = dgvProduto;
+
+            prod.Listar();
+        }
+
+        private void frmProduto_Load(object sender, EventArgs e)
+        {
+
+            prod.Preencher(cmbRazaoSocial);
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            RecebendoValor();
+            prod.Id = int.Parse(txtId.Text);
+            prod.Alterar();
+            EsvaziandoValores();
+        }
+
+        private void dgvProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            dgvProduto.CurrentRow.Selected = true;
+            txtId.Text = dgvProduto.Rows[e.RowIndex].Cells["id_produto"].FormattedValue.ToString();
+            txtNome.Text = dgvProduto.Rows[e.RowIndex].Cells["descricao"].FormattedValue.ToString();
+            txtPreco.Text = dgvProduto.Rows[e.RowIndex].Cells["preco"].FormattedValue.ToString();
+            txtQuantidade.Text = dgvProduto.Rows[e.RowIndex].Cells["quantidade"].FormattedValue.ToString();
+            cmbRazaoSocial.Text = dgvProduto.Rows[e.RowIndex].Cells["fornecedor"].FormattedValue.ToString();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            RecebendoValor();
+            prod.Id = int.Parse(txtId.Text);
+            prod.Excluir();
+            EsvaziandoValores();
         }
     }
 }

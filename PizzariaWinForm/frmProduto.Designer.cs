@@ -36,7 +36,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cmbRazaoSocial = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.btnExibir = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,9 +89,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(19, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 13);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Razao Social";
+            this.label5.Text = "Fornecedor";
             // 
             // txtId
             // 
@@ -116,13 +116,14 @@
             this.cmbRazaoSocial.Size = new System.Drawing.Size(159, 21);
             this.cmbRazaoSocial.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvProduto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 288);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 150);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Location = new System.Drawing.Point(12, 288);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.Size = new System.Drawing.Size(436, 150);
+            this.dgvProduto.TabIndex = 11;
+            this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellClick);
             // 
             // btnExibir
             // 
@@ -132,6 +133,7 @@
             this.btnExibir.TabIndex = 21;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = true;
+            this.btnExibir.Click += new System.EventHandler(this.btnExibir_Click);
             // 
             // btnExcluir
             // 
@@ -141,6 +143,7 @@
             this.btnExcluir.TabIndex = 20;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -150,6 +153,7 @@
             this.btnAlterar.TabIndex = 19;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCancelar
             // 
@@ -206,7 +210,7 @@
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.cmbRazaoSocial);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtId);
@@ -217,7 +221,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmProduto";
             this.Text = "frmProduto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +238,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.ComboBox cmbRazaoSocial;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.Button btnExibir;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;

@@ -51,5 +51,10 @@ namespace PizzariaWinForm
             this.Hide();
             menu.Show();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace PizzariaWinForm
         private decimal preco;
         private int quantidade;
         private string fabricante;
+        private int id;
+        private DataGridView dados;
 
 
 
@@ -28,10 +30,10 @@ namespace PizzariaWinForm
             get { return descricao; }
             set { descricao = value; }
         }
-        public decimal Preco
+        public int Id
         {
-            get { return preco; }
-            set { preco = value; }
+            get { return id; }
+            set { id = value; }
         }
         public int Quantidade
         {
@@ -43,11 +45,23 @@ namespace PizzariaWinForm
             get { return fabricante; }
             set { fabricante = value; }
         }
+        public decimal Preco
+        {
+            get { return preco; }
+            set { preco = value; }
+        }
 
+        public DataGridView Dados
+        {
+
+            get { return dados; }
+            set { dados = value; }
+        }
+        bool cad = false;
         public void Cadastrar()
         {
-                           
-            bool cad = false;
+
+
             try
             {
 
@@ -65,8 +79,8 @@ namespace PizzariaWinForm
             finally
             {
                 conexao.FecharBanco(conexao.AbrirBanco());
-                conexao = null;
-                comando = null;
+               // conexao = null;
+               // comando = null;
             }
             if (cad == true)
             {
@@ -80,24 +94,93 @@ namespace PizzariaWinForm
         }
         public void Alterar()
         {
+            try
+            {
+
+                string strSql = "UPDATE PRODUTO SET descricao='" + descricao + "', preco= '" + preco + "', quantidade= '" + quantidade + "' , fornecedor= '" + fabricante + "' where id_produto='" + id + "'";
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cad = false;
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+
+                //conexao = null;
+                //comando = null;
+            }
+            if (cad == true)
+            {
+                MessageBox.Show("Atualizado com sucesso!", MessageBoxButtons.OK.ToString());
+            }
 
         }
         public void Excluir()
         {
+            try
+            {
+
+                string strSql = "DELETE FROM PRODUTO where id_produto='" + id + "' ";
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cad = false;
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+                //conexao = null;
+                //comando = null;
+            }
+            if (cad == true)
+            {
+                MessageBox.Show("exluido com sucesso!", MessageBoxButtons.OK.ToString());
+            }
+
 
         }
         public void Listar()
         {
+            string strMySql = "SELECT *FROM PRODUTO";
+            comando = new MySqlCommand(strMySql, conexao.AbrirBanco());
 
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+
+                DataTable dtLista = new DataTable();
+
+                da.Fill(dtLista);
+
+                dados.DataSource = dtLista;
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex);
+            }
         }
-        public void Preencher (ComboBox comboBox)
+        public void Preencher(ComboBox comboBox)
         {
-            
+
 
             try
             {
                 string tbFornecedor = "select *from Fornecedor";
-                comando = new MySqlCommand(tbFornecedor , conexao.AbrirBanco());
+                comando = new MySqlCommand(tbFornecedor, conexao.AbrirBanco());
                 DataSet ds = new DataSet();
                 da = new MySqlDataAdapter(comando);
                 da.Fill(ds);
@@ -105,10 +188,10 @@ namespace PizzariaWinForm
                 comboBox.DisplayMember = "razao_social";
                 comboBox.ValueMember = "razao_social";
 
-                
+
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -118,8 +201,8 @@ namespace PizzariaWinForm
             }
 
         }
-    
-        
-        
+
+
+
     }
 }
