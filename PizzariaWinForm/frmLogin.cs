@@ -60,19 +60,22 @@ namespace PizzariaWinForm
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txtUsuario.Text == "") 
+            Login login = new Login();
+
+            login.Usuario = txtUsuario.Text;
+            login.Senha = txtSenha.Text;
+
+            if (login.Verificao() == false)
             {
-                MessageBox.Show("Preencha o Usuário!");
-                txtUsuario.Focus();
-                return;
+                txtUsuario.Clear();
+                txtSenha.Clear();
+
             }
-            if (txtSenha.Text == "")
+            else
             {
-                MessageBox.Show("Preencha a Senha!");
-                txtSenha.Focus();
-                return;
+                this.Hide();
             }
-            //ADEMILSON FAVOR COLOCAR CODIGO DE VALIDAÇÃO DE USUÁRIO    
+            
 
 
         }
