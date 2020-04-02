@@ -21,12 +21,12 @@ namespace PizzariaWinForm
         {
             Login login = new Login();
 
-            login.Usuario = txtLogin.Text;
+            login.Usuario = txtUsuario.Text;
             login.Senha = txtSenha.Text;
 
             if (login.Verificao() == false)
             {
-                txtLogin.Clear();
+                txtUsuario.Clear();
                 txtSenha.Clear();
 
             }
@@ -45,7 +45,7 @@ namespace PizzariaWinForm
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            pnlLogin.Location = new Point(this.Width / 2 - 168, this.Height / 2 - 100);
+            pnlLogin.Location = new Point(this.Width / 2 - 161, this.Height / 2 - 104);
         }
 
         private void pnlLogin_Paint(object sender, PaintEventArgs e)
@@ -72,6 +72,9 @@ namespace PizzariaWinForm
                 txtSenha.Focus();
                 return;
             }
+            //ADEMILSON FAVOR COLOCAR CODIGO DE VALIDAÇÃO DE USUÁRIO    
+
+
         }
     }
 }
