@@ -19,27 +19,25 @@ namespace PizzariaWinForm
             InitializeComponent();
             timerTempo.Start();
             PanelWidth = painelEsquerda.Width;
-            isCollapsed = false;        
+            isCollapsed = false;
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente cli = new frmCliente();
-            this.Hide();
-            cli.Show();
+           
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            panel7.BackColor = Color.FromArgb(173, 7, 66);
+            
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-           
+
         }
 
-     
+
         private void button10_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://facebook.com");
@@ -65,7 +63,7 @@ namespace PizzariaWinForm
         {
             if (isCollapsed)
             {
-                painelEsquerda.Width = painelEsquerda.Width + 10; 
+                painelEsquerda.Width = painelEsquerda.Width + 10;
                 if (painelEsquerda.Width >= PanelWidth)
                 {
                     timer1.Stop();
@@ -76,34 +74,45 @@ namespace PizzariaWinForm
             else
             {
                 painelEsquerda.Width = painelEsquerda.Width - 10;
-                if (painelEsquerda.Width<=70)
+                if (painelEsquerda.Width <= 70)
                 {
                     timer1.Stop();
                     isCollapsed = true;
                     this.Refresh();
                 }
-            }        
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Start();
         }
-        private void moveSidePanel(Control btn) 
+        private void moveSidePanel(Control btn)
         {
             panelSide.Top = btn.Top;
             panelSide.Height = btn.Height;
 
         }
 
+
+        private void AddControlsToPanel(Control c) 
+        {
+            c.Dock = DockStyle.Fill;
+            panelControls.Controls.Clear();
+            panelControls.Controls.Add(c);
+        }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            moveSidePanel(btnCadastrar);
+            moveSidePanel(btnRealizarPedido);
+            ControlesDeUsuario.CU_VendaPizza us = new ControlesDeUsuario.CU_VendaPizza();
+            AddControlsToPanel(us);
         }
 
         private void btnCardapio_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnCardapio);
+            ControlesDeUsuario.CU_Cardapio abs = new ControlesDeUsuario.CU_Cardapio();
+            AddControlsToPanel(abs);
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
@@ -119,11 +128,15 @@ namespace PizzariaWinForm
         private void btnVendas_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnVendas);
+            ControlesDeUsuario.CU_Vendas ula = new ControlesDeUsuario.CU_Vendas();
+            AddControlsToPanel(ula);
         }
 
         private void btnRelatorios_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnRelatorios);
+            ControlesDeUsuario.CU_Relatorios upa = new ControlesDeUsuario.CU_Relatorios();
+            AddControlsToPanel(upa);
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -134,13 +147,80 @@ namespace PizzariaWinForm
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnFornecedores);
+            ControlesDeUsuario.CU_CompraFornecedores up = new ControlesDeUsuario.CU_CompraFornecedores();
+            AddControlsToPanel(up);
         }
 
         private void timerTempo_Tick(object sender, EventArgs e)
         {
-            DateTime dt = System.DateTime.Now;
+            DateTime dt = DateTime.UtcNow;
             labelTime.Text = dt.ToString("HH:MM:ss");
           
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnHome);
+            ControlesDeUsuario.CU_Home usc = new ControlesDeUsuario.CU_Home();
+            AddControlsToPanel(usc);
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelTime_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(249, 6, 6);
+        }
+
+        private void labelTimee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnCadastrarFunc_Click(object sender, EventArgs e)
+        {
+            moveSidePanel(btnCadastrarFunc);
+            ControlesDeUsuario.CU_CadastrosUsuarios usb = new ControlesDeUsuario.CU_CadastrosUsuarios();
+            AddControlsToPanel(usb);
+
+        }
+
+        private void btnSair_Click_1(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

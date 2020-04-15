@@ -33,12 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,50 +50,98 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="ControlesDeUsuario\CU_Cardapio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Cardapio.Designer.cs">
+      <DependentUpon>CU_Cardapio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_CadastrosUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_CadastrosUsuarios.Designer.cs">
+      <DependentUpon>CU_CadastrosUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_CompraFornecedores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_CompraFornecedores.Designer.cs">
+      <DependentUpon>CU_CompraFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Home.Designer.cs">
+      <DependentUpon>CU_Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\CU_Relatorios.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlesDeUsuario\CU_Relatorios.Designer.cs">
       <DependentUpon>CU_Relatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesDeUsuario\CU_VendaPizza.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_VendaPizza.Designer.cs">
+      <DependentUpon>CU_VendaPizza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Vendas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Vendas.Designer.cs">
+      <DependentUpon>CU_Vendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbConc.cs" />
     <Compile Include="Formularios\Form_Dashboard.cs" />
+    <Compile Include="Formularios\frmCadastroBebidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroBebidas.Designer.cs">
+      <DependentUpon>frmCadastroBebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroEstoque.Designer.cs">
+      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroFim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroFim.Designer.cs">
+      <DependentUpon>frmCadastroFim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroPizzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroPizzas.Designer.cs">
+      <DependentUpon>frmCadastroPizzas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlesDeUsuario\TeladeEntrada.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Formularios\frmNovoFornecedor.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ControlesDeUsuario\TeladeEntrada.Designer.cs">
-      <DependentUpon>TeladeEntrada.cs</DependentUpon>
+    <Compile Include="Formularios\frmNovoFornecedor.Designer.cs">
+      <DependentUpon>frmNovoFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAddDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAddDespesa.Designer.cs">
+      <DependentUpon>frmAddDespesa.cs</DependentUpon>
     </Compile>
     <Compile Include="Fornecedor.cs" />
-    <Compile Include="Formularios\frmCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmCliente.Designer.cs">
-      <DependentUpon>frmCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmFornecedor.Designer.cs">
-      <DependentUpon>frmFornecedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmProduto.Designer.cs">
-      <DependentUpon>frmProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Pizzaria.cs" />
@@ -107,26 +154,50 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlesDeUsuario\CU_Cardapio.resx">
+      <DependentUpon>CU_Cardapio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_CadastrosUsuarios.resx">
+      <DependentUpon>CU_CadastrosUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_CompraFornecedores.resx">
+      <DependentUpon>CU_CompraFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_Home.resx">
+      <DependentUpon>CU_Home.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CU_Relatorios.resx">
       <DependentUpon>CU_Relatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_VendaPizza.resx">
+      <DependentUpon>CU_VendaPizza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_Vendas.resx">
+      <DependentUpon>CU_Vendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroBebidas.resx">
+      <DependentUpon>frmCadastroBebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroEstoque.resx">
+      <DependentUpon>frmCadastroEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroFim.resx">
+      <DependentUpon>frmCadastroFim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroPizzas.resx">
+      <DependentUpon>frmCadastroPizzas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlesDeUsuario\TeladeEntrada.resx">
-      <DependentUpon>TeladeEntrada.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmCliente.resx">
-      <DependentUpon>frmCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmFornecedor.resx">
-      <DependentUpon>frmFornecedor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmProduto.resx">
-      <DependentUpon>frmProduto.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmNovoFornecedor.resx">
+      <DependentUpon>frmNovoFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAddDespesa.resx">
+      <DependentUpon>frmAddDespesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>

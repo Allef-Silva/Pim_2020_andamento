@@ -17,8 +17,12 @@ namespace PizzariaWinForm.ControlesDeUsuario
             InitializeComponent();
         }
 
-        private void CU_Cadastrar_Load(object sender, EventArgs e)
+        private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
         {
+            using (Formularios.frmAddDespesa ae = new Formularios.frmAddDespesa()) 
+            {
+                ae.ShowDialog();
+            }
 
         }
     }
