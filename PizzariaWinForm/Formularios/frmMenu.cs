@@ -123,6 +123,8 @@ namespace PizzariaWinForm
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnPedidos);
+            ControlesDeUsuario.CU_Pedidos ula = new ControlesDeUsuario.CU_Pedidos();
+            AddControlsToPanel(ula);
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -142,6 +144,8 @@ namespace PizzariaWinForm
         private void btnClientes_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnClientes);
+            ControlesDeUsuario.CU_CadastroClientes ua = new ControlesDeUsuario.CU_CadastroClientes();
+            AddControlsToPanel(ua);
         }
 
         private void btnFornecedores_Click(object sender, EventArgs e)

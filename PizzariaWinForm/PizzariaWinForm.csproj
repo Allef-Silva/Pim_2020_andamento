@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="ControlesDeUsuario\CU_CadastroClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_CadastroClientes.Designer.cs">
+      <DependentUpon>CU_CadastroClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\CU_Cardapio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     </Compile>
     <Compile Include="ControlesDeUsuario\CU_Home.Designer.cs">
       <DependentUpon>CU_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Pedidos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Pedidos.Designer.cs">
+      <DependentUpon>CU_Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlesDeUsuario\CU_Relatorios.cs">
       <SubType>UserControl</SubType>
@@ -99,6 +111,12 @@
     </Compile>
     <Compile Include="Formularios\frmCadastroBebidas.Designer.cs">
       <DependentUpon>frmCadastroBebidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCadastroCliente.Designer.cs">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmCadastroEstoque.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlesDeUsuario\CU_CadastroClientes.resx">
+      <DependentUpon>CU_CadastroClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CU_Cardapio.resx">
       <DependentUpon>CU_Cardapio.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +187,9 @@
     <EmbeddedResource Include="ControlesDeUsuario\CU_Home.resx">
       <DependentUpon>CU_Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_Pedidos.resx">
+      <DependentUpon>CU_Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CU_Relatorios.resx">
       <DependentUpon>CU_Relatorios.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCadastroBebidas.resx">
       <DependentUpon>frmCadastroBebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCadastroCliente.resx">
+      <DependentUpon>frmCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCadastroEstoque.resx">
       <DependentUpon>frmCadastroEstoque.cs</DependentUpon>

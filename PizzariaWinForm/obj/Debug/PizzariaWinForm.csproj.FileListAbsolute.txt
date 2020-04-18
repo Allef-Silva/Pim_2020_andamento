@@ -44,3 +44,6 @@ C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\Pizz
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_CadastrosUsuarios.resources
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csprojAssemblyReference.cache
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_Vendas.resources
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_CadastroClientes.resources
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroCliente.resources
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_Pedidos.resources
