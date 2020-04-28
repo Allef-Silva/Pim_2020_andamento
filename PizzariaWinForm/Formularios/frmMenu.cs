@@ -118,6 +118,8 @@ namespace PizzariaWinForm
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             moveSidePanel(btnConsulta);
+            ControlesDeUsuario.CU_Consulta ubs = new ControlesDeUsuario.CU_Consulta();
+            AddControlsToPanel(ubs);
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)

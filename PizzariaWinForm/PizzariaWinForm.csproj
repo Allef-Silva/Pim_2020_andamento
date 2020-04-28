@@ -74,6 +74,12 @@
     <Compile Include="ControlesDeUsuario\CU_CompraFornecedores.Designer.cs">
       <DependentUpon>CU_CompraFornecedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Consulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesDeUsuario\CU_Consulta.Designer.cs">
+      <DependentUpon>CU_Consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlesDeUsuario\CU_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CU_CompraFornecedores.resx">
       <DependentUpon>CU_CompraFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesDeUsuario\CU_Consulta.resx">
+      <DependentUpon>CU_Consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlesDeUsuario\CU_Home.resx">
       <DependentUpon>CU_Home.cs</DependentUpon>
