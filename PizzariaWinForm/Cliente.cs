@@ -14,10 +14,22 @@ namespace PizzariaWinForm
         private string nome;
         private string endereco;
         private string telefone;
-        private string email;
+        private string cpf;
+        private int numero;
+        private int id;
 
 
 
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }  
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
+        }
         public string Nome
         {
             get { return nome; }
@@ -33,55 +45,10 @@ namespace PizzariaWinForm
             get { return telefone; }
             set { telefone = value; }
         }
-        public string Email
+        public string CPF
         {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public void Cadastrar()
-        {
-
-            dbConc conexao = new dbConc();
-            MySqlCommand comando;
-            bool cad = false;
-            try
-            {
-
-                string strSql = "INSERT INTO CLIENTE (nome_cliente, endereco_cliente, telefone_cliente, email_cliente) " +
-                    "VALUES ('" + nome + "','" + endereco + "','" + telefone + "' , '" + email + "')";
-                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
-                comando.ExecuteNonQuery();
-                cad = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                cad = false;
-            }
-            finally
-            {
-                conexao.FecharBanco(conexao.AbrirBanco());
-                conexao = null;
-                comando = null;
-            }
-            if(cad == true)
-            {
-                MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
-
-        }
-        public void Alterar()
-        {
-
-        }
-        public void Excluir()
-        {
-
-        }
-        public void Listar()
-        {
-
+            get { return cpf; }
+            set { cpf = value; }
         }
 
     }

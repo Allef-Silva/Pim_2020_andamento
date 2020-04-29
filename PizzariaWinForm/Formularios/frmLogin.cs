@@ -17,19 +17,26 @@ namespace PizzariaWinForm
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Login login = new Login();
 
-        }
+            login.Usuario = txtUsuario.Text;
+            login.Senha = txtSenha.Text;
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
+            if (login.Verificao() == false)
+            {
+                txtUsuario.Clear();
+                txtSenha.Clear();
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-         
+            }
+            else
+            {
+                this.Hide();
+            }
         }
     }
+
+
+
 }
