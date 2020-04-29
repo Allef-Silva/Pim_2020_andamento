@@ -34,7 +34,7 @@ namespace PizzariaWinForm
 
                 conex.AbrirBanco();
 
-                string strSql = "select * from login where usuario='" + Usuario + "' && senha='" + Senha + "' ";
+                string strSql = "select * from Login where usuario='" + Usuario + "' && senha='" + Senha + "' ";
                 
                 MySqlDataAdapter data = new MySqlDataAdapter(strSql, conex.AbrirBanco());
                 DataTable dt = new DataTable();
