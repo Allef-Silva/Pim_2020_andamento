@@ -46,7 +46,7 @@ namespace PizzariaWinForm.Formularios
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             RecebendoValor();
-            cad.StrSql = "INSERT INTO CLIENTE (nome_cliente, endereco_cliente, numero_cliente ,telefone_cliente, cpf_cliente) " +
+            cad.StrSql = "INSERT INTO cliente (nome_cliente, endereco_cliente, numero_cliente ,telefone_cliente, cpf_cliente) " +
                    "VALUES ('" + cli.Nome + "','" + cli.Endereco + "','" + cli.Numero+ "' ,'" + cli.Telefone + "' , '" + cli.CPF + "')";
 
             if (txtNomeCliente.Text == "")

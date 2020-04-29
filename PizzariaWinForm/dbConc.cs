@@ -10,7 +10,7 @@ namespace PizzariaWinForm
 {
     class dbConc
     {
-        string conexao = "Server=localhost;Database=pizzaria;Uid=root;Pwd=Brasileiro55@";
+        string conexao = "Server=pim-2020.cj2olk5t1tbe.sa-east-1.rds.amazonaws.com;Database=pizzaria;Uid=Master;Pwd=Brasileiro55";
         public MySqlConnection AbrirBanco()
         {
             MySqlConnection cn = new MySqlConnection(conexao);
