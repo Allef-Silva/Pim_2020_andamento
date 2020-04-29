@@ -83,3 +83,8 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Renci.SshNet.dll
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\MySql.Data.xml
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csproj.CopyComplete
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Google.Protobuf.dll
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Renci.SshNet.dll
+C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\MySql.Data.xml
