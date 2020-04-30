@@ -15,6 +15,10 @@ namespace PizzariaWinForm.ControlesDeUsuario
         public CU_CadastroClientes()
         {
             InitializeComponent();
+           
+          
+
+
         }
 
         private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
@@ -22,7 +26,22 @@ namespace PizzariaWinForm.ControlesDeUsuario
             using (Formularios.frmCadastroCliente abn = new Formularios.frmCadastroCliente())
             {
                 abn.ShowDialog();
+
             }
+        }
+        Cliente cad = new Cliente();
+    
+
+ 
+
+
+        private void btnAtulizar_Click(object sender, EventArgs e)
+        {
+            cad.Dados = dgvCliente;
+
+            cad.Listar();
+
+
         }
     }
 }

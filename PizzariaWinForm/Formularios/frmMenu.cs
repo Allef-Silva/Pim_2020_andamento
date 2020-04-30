@@ -21,6 +21,7 @@ namespace PizzariaWinForm
             PanelWidth = painelEsquerda.Width;
             isCollapsed = false;
         }
+        Cadastros cad = new Cadastros();
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -145,10 +146,13 @@ namespace PizzariaWinForm
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
+
             moveSidePanel(btnClientes);
             ControlesDeUsuario.CU_CadastroClientes ua = new ControlesDeUsuario.CU_CadastroClientes();
             AddControlsToPanel(ua);
         }
+
+        
 
         private void btnFornecedores_Click(object sender, EventArgs e)
         {
