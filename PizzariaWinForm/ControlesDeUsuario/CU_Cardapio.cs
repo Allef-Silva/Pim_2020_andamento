@@ -27,7 +27,7 @@ namespace PizzariaWinForm.ControlesDeUsuario
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (Formularios.frmCadastroBebidas abc = new Formularios.frmCadastroBebidas())
+            using (Formularios.frmCadastroProduto abc = new Formularios.frmCadastroProduto())
             {
                 abc.ShowDialog();
             }

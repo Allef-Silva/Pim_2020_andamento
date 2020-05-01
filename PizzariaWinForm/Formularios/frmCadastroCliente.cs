@@ -15,13 +15,14 @@ namespace PizzariaWinForm.Formularios
         public frmCadastroCliente()
         {
             InitializeComponent();
+            RecebendoValorDgv();
         }
 
         Cliente cli = new Cliente();
         Cadastros cad = new Cadastros();
         string mensagem = "Deseja sair do cadastro?";
         string fechar = "fechando cadastro!!";
-        public void RecebendoValor()
+        private void RecebendoValor()
         {
 
             cli.Nome = txtNomeCliente.Text;
@@ -29,8 +30,17 @@ namespace PizzariaWinForm.Formularios
             cli.Telefone = mskTelefone.Text;
             cli.CPF = txtCpf.Text;
             cli.Numero = int.Parse(txtNumero.Text);
+        } 
+        private void RecebendoValorDgv()
+        {
+
+            txtNomeCliente.Text = cli.Nome;
+            txtEndereco.Text = cli.Endereco  ;
+            mskTelefone.Text = cli.Telefone;
+            txtCpf.Text = cli.CPF;
+            txtNumero.Text =  cli.Numero.ToString() ;
         }
-        public void EsvaziandoCampos()
+        private void EsvaziandoCampos()
         {
             txtId.Clear();
             txtNomeCliente.Clear();
@@ -45,46 +55,42 @@ namespace PizzariaWinForm.Formularios
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            RecebendoValor();
-         
-
-            if (txtNomeCliente.Text == "")
+            if (txtCpf.Text != " " && txtNomeCliente.Text != " " && txtEndereco.Text != "" && mskTelefone.Text != "" && txtNumero.Text != "")
             {
-                MessageBox.Show("O CAMPO NOME DEVE ESTAR PREENCHIDO", "NOME", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNomeCliente.Select();
-                return;
-            }
 
-            if (txtCpf.Text == "")
-            {
-                MessageBox.Show("O CAMPO E-MAIL DEVE ESTAR PREENCHIDO", "CPF", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtCpf.Select();
-                return;
-            }
+                RecebendoValor();
+                var result = MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
 
-            //VA
-            if (txtCpf.Text != " " && txtNomeCliente.Text != " ")
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+
+                }
+
                 cli.Cadastrar();
-            var result =  MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
-            EsvaziandoCampos();
-            if (result == DialogResult.OK)
-            {
-                this.Close();
-                
+                EsvaziandoCampos();
+
             }
-            
+                                              
+            else
+            {
+                MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
+
+            }
+
         }
+        
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
-            
-            var result = MessageBox.Show(mensagem,fechar, 
+
+            var result = MessageBox.Show(mensagem, fechar,
                                 MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question);
 
             if (result == DialogResult.No)
             {
-                
+
             }
             else
             {
@@ -107,5 +113,13 @@ namespace PizzariaWinForm.Formularios
                 this.Close();
             }
         }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((Char.IsLetter(e.KeyChar)))
+                e.Handled = true;
+        }
+       
+
     }
 }

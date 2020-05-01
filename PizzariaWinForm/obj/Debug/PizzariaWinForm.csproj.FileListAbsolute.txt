@@ -59,7 +59,6 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_Relatorios.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_VendaPizza.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.ControlesDeUsuario.CU_Vendas.resources
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroBebidas.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroCliente.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroEstoque.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroFim.resources
@@ -126,3 +125,13 @@ C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinF
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.exe
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.pdb
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csprojAssemblyReference.cache
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.dll
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.dll
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.dll
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.pdb
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.xml
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.pdb
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.xml
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.pdb
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.xml
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources

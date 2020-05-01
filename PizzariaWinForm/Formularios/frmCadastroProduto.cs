@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PizzariaWinForm.Formularios
 {
-    public partial class frmCadastroBebidas : Form
+    public partial class frmCadastroProduto : Form
     {
-        public frmCadastroBebidas()
+        public frmCadastroProduto()
         {
             InitializeComponent();
         }
