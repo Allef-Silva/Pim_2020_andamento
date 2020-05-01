@@ -163,9 +163,12 @@ namespace PizzariaWinForm
 
         private void timerTempo_Tick(object sender, EventArgs e)
         {
-            DateTime dt = DateTime.UtcNow;
-            labelTime.Text = dt.ToString("HH:MM:ss");
-          
+           
+            {
+                labelTime.Text = DateTime.Now.ToString("hh:mm:ss ");
+                
+            }
+
         }
 
         private void labelTime_Click(object sender, EventArgs e)
@@ -212,12 +215,12 @@ namespace PizzariaWinForm
 
         private void labelTimee_Click(object sender, EventArgs e)
         {
-
+                 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
 
         private void btnCadastrarFunc_Click(object sender, EventArgs e)
@@ -230,7 +233,7 @@ namespace PizzariaWinForm
 
         private void btnSair_Click_1(object sender, EventArgs e)
         {
-            this.Dispose();
+            Application.Exit();
         }
     }
 }

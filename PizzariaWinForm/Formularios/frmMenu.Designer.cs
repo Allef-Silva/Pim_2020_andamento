@@ -59,6 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelControls = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
             this.painelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -386,6 +387,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.panel1.Controls.Add(this.lblData);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.labelUsuario);
@@ -462,6 +464,19 @@
             this.panelControls.Size = new System.Drawing.Size(1115, 650);
             this.panelControls.TabIndex = 18;
             // 
+            // lblData
+            // 
+            this.lblData.AutoEllipsis = true;
+            this.lblData.AutoSize = true;
+            this.lblData.BackColor = System.Drawing.Color.Transparent;
+            this.lblData.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Location = new System.Drawing.Point(786, 35);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(326, 40);
+            this.lblData.TabIndex = 71;
+            this.lblData.Text = "Sexta, 01 Abril 2020";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,5 +538,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrarFunc;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblData;
     }
 }

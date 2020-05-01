@@ -36,5 +36,21 @@ namespace PizzariaWinForm.ControlesDeUsuario
         {
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss ");
+            lblData.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void lblhora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblData_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
