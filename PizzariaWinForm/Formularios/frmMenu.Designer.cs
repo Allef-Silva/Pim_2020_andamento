@@ -87,7 +87,7 @@
             this.painelEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.painelEsquerda.Location = new System.Drawing.Point(0, 0);
             this.painelEsquerda.Name = "painelEsquerda";
-            this.painelEsquerda.Size = new System.Drawing.Size(200, 795);
+            this.painelEsquerda.Size = new System.Drawing.Size(200, 788);
             this.painelEsquerda.TabIndex = 0;
             // 
             // btnCadastrarFunc
@@ -459,7 +459,7 @@
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControls.Location = new System.Drawing.Point(200, 138);
             this.panelControls.Name = "panelControls";
-            this.panelControls.Size = new System.Drawing.Size(1115, 657);
+            this.panelControls.Size = new System.Drawing.Size(1115, 650);
             this.panelControls.TabIndex = 18;
             // 
             // frmMenu
@@ -468,7 +468,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1315, 795);
+            this.ClientSize = new System.Drawing.Size(1315, 788);
             this.Controls.Add(this.panelControls);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);

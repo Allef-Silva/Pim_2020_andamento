@@ -31,22 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CU_CadastroClientes));
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAtulizar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAdicionarFornecedor = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.dgvCliente = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -71,15 +66,6 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Copyright © 2020, All Rights Reserved by PIM ADS3 2020\r\n\r\n";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(10, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1095, 10);
-            this.panel3.TabIndex = 10;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -98,32 +84,10 @@
             this.panel1.Size = new System.Drawing.Size(10, 657);
             this.panel1.TabIndex = 8;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1095, 529);
-            this.dataGridView1.TabIndex = 17;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btnAtulizar);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.btnAdicionarFornecedor);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -133,23 +97,24 @@
             this.panel6.Size = new System.Drawing.Size(1095, 85);
             this.panel6.TabIndex = 18;
             // 
-            // button1
+            // btnAtulizar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(187, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(187, 85);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Atualizar";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAtulizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btnAtulizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtulizar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAtulizar.FlatAppearance.BorderSize = 0;
+            this.btnAtulizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtulizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtulizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtulizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtulizar.Image")));
+            this.btnAtulizar.Location = new System.Drawing.Point(187, 0);
+            this.btnAtulizar.Name = "btnAtulizar";
+            this.btnAtulizar.Size = new System.Drawing.Size(187, 85);
+            this.btnAtulizar.TabIndex = 12;
+            this.btnAtulizar.Text = "Atualizar";
+            this.btnAtulizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtulizar.UseVisualStyleBackColor = false;
+            this.btnAtulizar.Click += new System.EventHandler(this.btnAtulizar_Click);
             // 
             // label5
             // 
@@ -182,41 +147,36 @@
             this.btnAdicionarFornecedor.UseVisualStyleBackColor = false;
             this.btnAdicionarFornecedor.Click += new System.EventHandler(this.btnAdicionarFornecedor_Click);
             // 
-            // Column1
+            // panel3
             // 
-            this.Column1.HeaderText = "ID Cliente";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(10, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1095, 10);
+            this.panel3.TabIndex = 10;
             // 
-            // Column2
+            // dgvCliente
             // 
-            this.Column2.HeaderText = "Endereço";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "CPF";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Telefone";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Quantidade Pedida";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
+            this.dgvCliente.AllowUserToAddRows = false;
+            this.dgvCliente.AllowUserToDeleteRows = false;
+            this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCliente.Location = new System.Drawing.Point(10, 95);
+            this.dgvCliente.Name = "dgvCliente";
+            this.dgvCliente.ReadOnly = true;
+            this.dgvCliente.RowHeadersVisible = false;
+            this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCliente.Size = new System.Drawing.Size(1095, 529);
+            this.dgvCliente.TabIndex = 17;
             // 
             // CU_CadastroClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -228,9 +188,9 @@
             this.Size = new System.Drawing.Size(1115, 657);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -239,18 +199,13 @@
 
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAtulizar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAdicionarFornecedor;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvCliente;
     }
 }
