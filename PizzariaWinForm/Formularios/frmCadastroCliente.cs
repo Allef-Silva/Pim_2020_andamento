@@ -19,7 +19,7 @@ namespace PizzariaWinForm.Formularios
         }
 
         Cliente cli = new Cliente();
-        Cadastros cad = new Cadastros();
+        
         string mensagem = "Deseja sair do cadastro?";
         string fechar = "fechando cadastro!!";
         private void RecebendoValor()

@@ -16,7 +16,7 @@ namespace PizzariaWinForm.ControlesDeUsuario
         {
             InitializeComponent();
         }
-
+        Produto prod = new Produto();
         private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
         {
             using (Formularios.frmCadastroPizzas ab = new Formularios.frmCadastroPizzas())
@@ -31,6 +31,18 @@ namespace PizzariaWinForm.ControlesDeUsuario
             {
                 abc.ShowDialog();
             }
+        }
+
+        private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void btnAtulizar_Click(object sender, EventArgs e)
+        {
+            prod.Dados = dgvProduto;
+
+            prod.Listar();
         }
     }
 }

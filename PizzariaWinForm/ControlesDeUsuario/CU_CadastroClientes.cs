@@ -49,7 +49,7 @@ namespace PizzariaWinForm.ControlesDeUsuario
             using (Formularios.frmCadastroCliente abn = new Formularios.frmCadastroCliente())
             {
                 abn.ShowDialog();
-                string strSql = "select cod_cliente as Cliente, nome_cliente as Nome, endereco_cliente as Endereco, numero_cliente as Numero, telefone_cliente as Telefone, cpf_cliente as CPF  from cliente"; ;
+                
 
                 Cliente cli = new Cliente();
                 dgvCliente.CurrentRow.Selected = true;

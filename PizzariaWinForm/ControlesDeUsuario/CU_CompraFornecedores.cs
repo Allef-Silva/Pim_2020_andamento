@@ -33,34 +33,14 @@ namespace PizzariaWinForm.ControlesDeUsuario
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+    
+
+        private void btnAtulizar_Click(object sender, EventArgs e)
         {
+            Fornecedor fornecedor = new Fornecedor();
+            fornecedor.Dados = dgvFornecedor;
 
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
+            fornecedor.Listar();
         }
     }
 }
