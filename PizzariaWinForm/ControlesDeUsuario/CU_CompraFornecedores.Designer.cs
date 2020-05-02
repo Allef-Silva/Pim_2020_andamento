@@ -35,23 +35,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAtulizar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdicionarFornecedor = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvFornecedor = new System.Windows.Forms.DataGridView();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -84,7 +79,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1095, 10);
             this.panel3.TabIndex = 9;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel2
             // 
@@ -107,6 +101,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.panel5.Controls.Add(this.btnAtulizar);
             this.panel5.Controls.Add(this.textBox1);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.comboBox1);
@@ -118,7 +113,25 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1095, 85);
             this.panel5.TabIndex = 11;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // btnAtulizar
+            // 
+            this.btnAtulizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btnAtulizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtulizar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAtulizar.FlatAppearance.BorderSize = 0;
+            this.btnAtulizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtulizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtulizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtulizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtulizar.Image")));
+            this.btnAtulizar.Location = new System.Drawing.Point(374, 0);
+            this.btnAtulizar.Name = "btnAtulizar";
+            this.btnAtulizar.Size = new System.Drawing.Size(187, 85);
+            this.btnAtulizar.TabIndex = 13;
+            this.btnAtulizar.Text = "Atualizar";
+            this.btnAtulizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtulizar.UseVisualStyleBackColor = false;
+            this.btnAtulizar.Click += new System.EventHandler(this.btnAtulizar_Click);
             // 
             // textBox1
             // 
@@ -127,7 +140,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 27);
             this.textBox1.TabIndex = 8;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -140,7 +152,6 @@
             this.label5.Size = new System.Drawing.Size(124, 23);
             this.label5.TabIndex = 11;
             this.label5.Text = "Procure Por :";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // comboBox1
             // 
@@ -158,7 +169,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(156, 27);
             this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -200,72 +210,28 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dataGridView1);
+            this.panel6.Controls.Add(this.dgvFornecedor);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(10, 95);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1095, 537);
             this.panel6.TabIndex = 12;
             // 
-            // dataGridView1
+            // dgvFornecedor
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1095, 537);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID FORNECEDOR";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "PRODUTO(S)";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "QUANTIDADE";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "PREÇO DE CUSTO";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "PREÇO DE VENDA";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CODIGO DE PRODUTO";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.dgvFornecedor.AllowUserToAddRows = false;
+            this.dgvFornecedor.AllowUserToDeleteRows = false;
+            this.dgvFornecedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFornecedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvFornecedor.Location = new System.Drawing.Point(0, 0);
+            this.dgvFornecedor.Name = "dgvFornecedor";
+            this.dgvFornecedor.ReadOnly = true;
+            this.dgvFornecedor.RowHeadersVisible = false;
+            this.dgvFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFornecedor.Size = new System.Drawing.Size(1095, 537);
+            this.dgvFornecedor.TabIndex = 0;
             // 
             // CU_CompraFornecedores
             // 
@@ -288,7 +254,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,13 +272,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView dgvFornecedor;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAtulizar;
     }
 }

@@ -57,14 +57,14 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(10, 529);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(425, 10);
+            this.panel5.Size = new System.Drawing.Size(491, 10);
             this.panel5.TabIndex = 27;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(435, 10);
+            this.panel7.Location = new System.Drawing.Point(501, 10);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 529);
             this.panel7.TabIndex = 26;
@@ -84,7 +84,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(445, 10);
+            this.panel3.Size = new System.Drawing.Size(511, 10);
             this.panel3.TabIndex = 24;
             // 
             // btnFechar
@@ -96,7 +96,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnFechar.Location = new System.Drawing.Point(363, 16);
+            this.btnFechar.Location = new System.Drawing.Point(396, 16);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(66, 56);
             this.btnFechar.TabIndex = 55;
@@ -113,7 +113,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(68, 435);
+            this.btnCadastrar.Location = new System.Drawing.Point(101, 435);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(166, 54);
             this.btnCadastrar.TabIndex = 54;
@@ -130,7 +130,7 @@
             this.btnFecharCad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharCad.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFecharCad.ForeColor = System.Drawing.Color.White;
-            this.btnFecharCad.Location = new System.Drawing.Point(263, 435);
+            this.btnFecharCad.Location = new System.Drawing.Point(296, 435);
             this.btnFecharCad.Name = "btnFecharCad";
             this.btnFecharCad.Size = new System.Drawing.Size(157, 54);
             this.btnFecharCad.TabIndex = 53;
@@ -193,7 +193,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.label4.Location = new System.Drawing.Point(140, 79);
+            this.label4.Location = new System.Drawing.Point(173, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 25);
             this.label4.TabIndex = 42;
@@ -253,6 +253,7 @@
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(60, 20);
             this.txtNumero.TabIndex = 57;
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // label6
             // 
@@ -268,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(445, 539);
+            this.ClientSize = new System.Drawing.Size(511, 539);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.mskTelefone);

@@ -35,23 +35,16 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdicionarFornecedor = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnAtulizar = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,78 +106,22 @@
             this.panel5.Size = new System.Drawing.Size(1095, 10);
             this.panel5.TabIndex = 13;
             // 
-            // dataGridView1
+            // dgvProduto
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column3,
-            this.Column2,
-            this.Column4,
-            this.Column5,
-            this.Column7,
-            this.Column8,
-            this.Column6});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1095, 536);
-            this.dataGridView1.TabIndex = 12;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "ID PIZZA";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "ID BEBIDA";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "SABORES";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "PREÇO DE CUSTO PIZZA";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "PREÇO DE VENDA PIZZA";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "PREÇO DE CUSTO BEBIDA";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "PREÇO DE VENDA BEBIDA";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "CODIGO DE PRODUTO";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
+            this.dgvProduto.AllowUserToAddRows = false;
+            this.dgvProduto.AllowUserToDeleteRows = false;
+            this.dgvProduto.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvProduto.Location = new System.Drawing.Point(10, 95);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.ReadOnly = true;
+            this.dgvProduto.RowHeadersVisible = false;
+            this.dgvProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvProduto.Size = new System.Drawing.Size(1095, 536);
+            this.dgvProduto.TabIndex = 12;
+            this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellContentClick);
             // 
             // textBox1
             // 
@@ -263,6 +200,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.panel6.Controls.Add(this.btnAtulizar);
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.comboBox1);
@@ -275,11 +213,30 @@
             this.panel6.Size = new System.Drawing.Size(1095, 85);
             this.panel6.TabIndex = 14;
             // 
+            // btnAtulizar
+            // 
+            this.btnAtulizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btnAtulizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtulizar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnAtulizar.FlatAppearance.BorderSize = 0;
+            this.btnAtulizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtulizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtulizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtulizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtulizar.Image")));
+            this.btnAtulizar.Location = new System.Drawing.Point(396, 0);
+            this.btnAtulizar.Name = "btnAtulizar";
+            this.btnAtulizar.Size = new System.Drawing.Size(187, 85);
+            this.btnAtulizar.TabIndex = 13;
+            this.btnAtulizar.Text = "Atualizar";
+            this.btnAtulizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAtulizar.UseVisualStyleBackColor = false;
+            this.btnAtulizar.Click += new System.EventHandler(this.btnAtulizar_Click);
+            // 
             // CU_Cardapio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -292,7 +249,7 @@
             this.Size = new System.Drawing.Size(1115, 657);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
@@ -306,15 +263,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -322,5 +271,6 @@
         private System.Windows.Forms.Button btnAdicionarFornecedor;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAtulizar;
     }
 }

@@ -16,11 +16,14 @@ namespace PizzariaWinForm
         MySqlDataAdapter da;
 
         private string descricao;
-        private decimal preco;
+        private double preco;
+        private double precoVenda;
         private int quantidade;
         private string fabricante;
         private int id;
         private DataGridView dados;
+
+        private string categoria;
 
 
 
@@ -30,6 +33,13 @@ namespace PizzariaWinForm
             get { return descricao; }
             set { descricao = value; }
         }
+        public string Categoria
+        {
+            get { return categoria; }
+            set { categoria = value; }
+        }
+
+      
         public int Id
         {
             get { return id; }
@@ -45,10 +55,15 @@ namespace PizzariaWinForm
             get { return fabricante; }
             set { fabricante = value; }
         }
-        public decimal Preco
+        public double Preco
         {
             get { return preco; }
             set { preco = value; }
+        }
+        public double PrecoVenda
+        {
+            get { return precoVenda; }
+            set { precoVenda = value; }
         }
 
         public DataGridView Dados
@@ -62,11 +77,12 @@ namespace PizzariaWinForm
         {
 
 
+
             try
             {
 
-                string strSql = "INSERT INTO PRODUTO (descricao, preco, quantidade, fornecedor) " +
-                    "VALUES ('" + descricao + "','" + preco + "','" + quantidade + "' , '" + fabricante + "')";
+                string strSql = "INSERT INTO produto (descricao, preco, precoVenda, categoria,quantidade, fornecedor) " +
+                    "VALUES ('" + descricao + "','" + preco + "','" + precoVenda + "' , '" + categoria + "', '" + quantidade + "', '" + fabricante + "')";
                 comando = new MySqlCommand(strSql, conexao.AbrirBanco());
                 comando.ExecuteNonQuery();
                 cad = true;
@@ -79,8 +95,8 @@ namespace PizzariaWinForm
             finally
             {
                 conexao.FecharBanco(conexao.AbrirBanco());
-               // conexao = null;
-               // comando = null;
+                // conexao = null;
+                // comando = null;
             }
             if (cad == true)
             {
@@ -152,7 +168,7 @@ namespace PizzariaWinForm
         }
         public void Listar()
         {
-            string strMySql = "SELECT *FROM PRODUTO";
+            string strMySql = "SELECT *FROM produto";
             comando = new MySqlCommand(strMySql, conexao.AbrirBanco());
 
             try
@@ -173,7 +189,8 @@ namespace PizzariaWinForm
                 MessageBox.Show("Ocorreu um erro" + ex);
             }
         }
-        public void Preencher(ComboBox comboBox)
+    
+        public void PreencherFornecedor(ComboBox comboBox)
         {
 
 
@@ -185,8 +202,8 @@ namespace PizzariaWinForm
                 da = new MySqlDataAdapter(comando);
                 da.Fill(ds);
                 comboBox.DataSource = ds.Tables[0];
-                comboBox.DisplayMember = "razao_social";
-                comboBox.ValueMember = "razao_social";
+                comboBox.DisplayMember = "nome_fantasia";
+                comboBox.ValueMember = "cnpj";
 
 
 

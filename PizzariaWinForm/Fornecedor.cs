@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace PizzariaWinForm
 {
 
-    
+
 
     class Fornecedor
     {
@@ -18,17 +19,35 @@ namespace PizzariaWinForm
         private string nome;
         private string telefone;
         private string endereco;
+        private string obs;
+        private int numero;
+        private DataGridView dados;
 
 
         public string Cnpj
         {
             get { return cnpj; }
             set { cnpj = value; }
+        } 
+        public int Numero
+        {
+            get { return numero; }
+            set { numero = value; }
         }
         public string Razao_social
         {
             get { return razao_social; }
             set { razao_social = value; }
+        }  
+        public string Obs
+        {
+            get { return razao_social; }
+            set { razao_social = value; }
+        }
+        public DataGridView Dados
+        {
+            get { return dados; }
+            set { dados = value; }
         }
 
         public string Nome
@@ -47,56 +66,110 @@ namespace PizzariaWinForm
             set { endereco = value; }
         }
 
-
+        dbConc conexao = new dbConc();
+        MySqlCommand comando;
 
 
         public void Cadastrar()
         {
+            string strSql = "INSERT INTO Fornecedor (razao_social, cnpj, nome_fantasia ,endereco, numero, telefone, Observacoes) " +
+                   "VALUES ('" + razao_social + "','" + cnpj + "','" + nome + "' ,'" + endereco + "' , '" + numero + "', '" + telefone + "', '" + obs + "')";
 
-            dbConc conexao = new dbConc();
-            MySqlCommand comando;
-            bool cad = false;
             try
             {
 
-                string strSql = "INSERT INTO FORNECEDOR (razao_social, cnpj, nome, endereco, telefone) " +
-                    "VALUES ('" + razao_social + "','" + cnpj + "','" + nome + "' , '" + telefone + "','" + endereco + "')";
                 comando = new MySqlCommand(strSql, conexao.AbrirBanco());
                 comando.ExecuteNonQuery();
-                cad = true;
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cad = false;
+
             }
             finally
             {
                 conexao.FecharBanco(conexao.AbrirBanco());
-                conexao = null;
-                comando = null;
+                // conexao = null;
+                // comando = null;
             }
-            if (cad == true)
-            {
-                MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Tente Novamente!", MessageBoxButtons.OK.ToString());
-            }
+
+
+         
 
         }
         public void Alterar()
         {
+            string strSql = "";
+            try
+            {
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+
+                //conexao = null;
+                //comando = null;
+            }
+
 
         }
         public void Excluir()
         {
+            string strSql = "a";
+            try
+            {
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+                //conexao = null;
+                //comando = null;
+            }
+
+
 
         }
         public void Listar()
+           
         {
+            string strSql = "select razao_social as Social, cnpj as CNPJ, nome_fantasia as Nome , endereco as Endereco, numero as Numero, telefone as Telefone, Observacoes  from Fornecedor"; 
+            comando = new MySqlCommand(strSql, conexao.AbrirBanco());
 
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+
+                DataTable dtLista = new DataTable();
+                DataSet ds = new DataSet();
+                da.Fill(dtLista);
+
+
+                dados.DataSource = dtLista;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex);
+            }
         }
     }
 }
