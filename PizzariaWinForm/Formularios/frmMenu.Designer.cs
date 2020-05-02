@@ -466,6 +466,7 @@
             // 
             // lblData
             // 
+            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblData.AutoEllipsis = true;
             this.lblData.AutoSize = true;
             this.lblData.BackColor = System.Drawing.Color.Transparent;
