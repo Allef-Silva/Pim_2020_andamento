@@ -41,8 +41,8 @@ namespace PizzariaWinForm
         }  
         public string Obs
         {
-            get { return razao_social; }
-            set { razao_social = value; }
+            get { return obs; }
+            set { obs = value; }
         }
         public DataGridView Dados
         {
@@ -100,7 +100,9 @@ namespace PizzariaWinForm
         }
         public void Alterar()
         {
-            string strSql = "";
+            
+            string strSql =  "UPDATE Fornecedor SET razao_social = '" + razao_social +
+                "', nome_fantasia= '" + nome + "' , endereco= '" + endereco + "', numero= '" + numero + "' , telefone= '" + telefone + "', Observacoes= '" + obs + "' where cnpj= '" + cnpj + "'";
             try
             {
 

@@ -49,6 +49,7 @@
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel5
@@ -113,7 +114,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(101, 435);
+            this.btnCadastrar.Location = new System.Drawing.Point(109, 435);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(166, 54);
             this.btnCadastrar.TabIndex = 54;
@@ -264,12 +265,31 @@
             this.label6.TabIndex = 58;
             this.label6.Text = "N";
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.Location = new System.Drawing.Point(109, 435);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(166, 54);
+            this.btnAlterar.TabIndex = 59;
+            this.btnAlterar.Text = "Alterar Cliente";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Visible = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // frmCadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(511, 539);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.mskTelefone);
@@ -296,6 +316,7 @@
             this.Name = "frmCadastroCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastroCliente";
+            this.Load += new System.EventHandler(this.frmCadastroCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +344,6 @@
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

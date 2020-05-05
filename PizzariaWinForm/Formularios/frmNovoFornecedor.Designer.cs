@@ -51,6 +51,7 @@
             this.mskTelefone = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtCnpj = new System.Windows.Forms.TextBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel4
@@ -283,12 +284,31 @@
             this.txtCnpj.Size = new System.Drawing.Size(174, 27);
             this.txtCnpj.TabIndex = 27;
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.Location = new System.Drawing.Point(242, 449);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(192, 54);
+            this.btnAlterar.TabIndex = 41;
+            this.btnAlterar.Text = "Alterar Fornecedor";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Visible = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // frmNovoFornecedor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1018, 572);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.mskTelefone);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label10);
@@ -347,5 +367,6 @@
         private System.Windows.Forms.MaskedTextBox mskTelefone;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCnpj;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

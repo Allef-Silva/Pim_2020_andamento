@@ -22,6 +22,7 @@ namespace PizzariaWinForm
         private string fabricante;
         private int id;
         private DataGridView dados;
+     
 
         private string categoria;
 
@@ -33,6 +34,7 @@ namespace PizzariaWinForm
             get { return descricao; }
             set { descricao = value; }
         }
+    
         public string Categoria
         {
             get { return categoria; }
@@ -80,17 +82,17 @@ namespace PizzariaWinForm
 
             try
             {
-
-                string strSql = "INSERT INTO produto (descricao, preco, precoVenda, categoria,quantidade, fornecedor) " +
-                    "VALUES ('" + descricao + "','" + preco + "','" + precoVenda + "' , '" + categoria + "', '" + quantidade + "', '" + fabricante + "')";
-                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
-                comando.ExecuteNonQuery();
-                cad = true;
+                                               
+                      string strSql = "INSERT INTO produto (descricao, preco, precoVenda, categoria,quantidade, fornecedor) " +
+                      "VALUES ('" + descricao + "','" + preco + "','" + precoVenda + "' , '" + categoria + "', '" + quantidade + "', '" + fabricante + "')";
+                    comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                    comando.ExecuteNonQuery();
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cad = false;
+               
             }
             finally
             {
@@ -98,31 +100,24 @@ namespace PizzariaWinForm
                 // conexao = null;
                 // comando = null;
             }
-            if (cad == true)
-            {
-                MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Tente Novamente!", MessageBoxButtons.OK.ToString());
-            }
-
+        
         }
         public void Alterar()
         {
             try
             {
+                
 
-                string strSql = "UPDATE PRODUTO SET descricao='" + descricao + "', preco= '" + preco + "', quantidade= '" + quantidade + "' , fornecedor= '" + fabricante + "' where id_produto='" + id + "'";
+                string strSql = "UPDATE produto SET descricao='" + descricao + "', preco= '" + preco + "', precoVenda= '" + PrecoVenda + "' , categoria= '" + categoria + "', quantidade= '" + quantidade + "', fornecedor= '" + fabricante + "' where id_produto='" + id + "'";
 
                 comando = new MySqlCommand(strSql, conexao.AbrirBanco());
                 comando.ExecuteNonQuery();
-                cad = true;
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cad = false;
+                
             }
             finally
             {
@@ -131,10 +126,7 @@ namespace PizzariaWinForm
                 //conexao = null;
                 //comando = null;
             }
-            if (cad == true)
-            {
-                MessageBox.Show("Atualizado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
+         
 
         }
         public void Excluir()

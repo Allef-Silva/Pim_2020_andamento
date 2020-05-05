@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CU_CadastroClientes));
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,6 +40,9 @@
             this.btnAdicionarFornecedor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
@@ -87,6 +91,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.panel6.Controls.Add(this.txtCliente);
             this.panel6.Controls.Add(this.btnAtulizar);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.btnAdicionarFornecedor);
@@ -173,6 +178,23 @@
             this.dgvCliente.TabIndex = 17;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellContentClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // txtCliente
+            // 
+            this.txtCliente.Location = new System.Drawing.Point(446, 32);
+            this.txtCliente.Name = "txtCliente";
+            this.txtCliente.Size = new System.Drawing.Size(100, 27);
+            this.txtCliente.TabIndex = 13;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            // 
             // CU_CadastroClientes
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -208,5 +230,8 @@
         private System.Windows.Forms.Button btnAdicionarFornecedor;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.TextBox txtCliente;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

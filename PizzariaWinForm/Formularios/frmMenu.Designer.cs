@@ -53,13 +53,13 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timerTempo = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.labelUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelControls = new System.Windows.Forms.Panel();
-            this.lblData = new System.Windows.Forms.Label();
             this.painelEsquerda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
@@ -399,6 +399,19 @@
             this.panel1.Size = new System.Drawing.Size(1115, 90);
             this.panel1.TabIndex = 17;
             // 
+            // lblData
+            // 
+            this.lblData.AutoEllipsis = true;
+            this.lblData.AutoSize = true;
+            this.lblData.BackColor = System.Drawing.Color.Transparent;
+            this.lblData.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.Color.White;
+            this.lblData.Location = new System.Drawing.Point(786, 35);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(326, 40);
+            this.lblData.TabIndex = 71;
+            this.lblData.Text = "Sexta, 01 Abril 2020";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -464,6 +477,7 @@
             this.panelControls.Size = new System.Drawing.Size(1115, 650);
             this.panelControls.TabIndex = 18;
             // 
+<<<<<<< HEAD
             // lblData
             // 
             this.lblData.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -478,6 +492,8 @@
             this.lblData.TabIndex = 71;
             this.lblData.Text = "Sexta, 01 Abril 2020";
             // 
+=======
+>>>>>>> ec0600127ceaaebc4b6eb934edbf53c9bd06940e
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

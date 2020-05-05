@@ -42,14 +42,20 @@ namespace PizzariaWinForm.Formularios
             prod.Quantidade = int.Parse(txtQuantidade.Text);
             prod.Fabricante = cmbFornecedor.SelectedValue.ToString();
             prod.Categoria = cmbCategoria.Text;
+           
         }
-        private void RecebendoValorDgv()
+        public void RecebendoValorDgv(string id, string descricao, string preco, string precoVenda, string quantidade, string fornecedor, string categoria)
         {
-            txtNome.Text = prod.Descricao;
-            txtPrecoCusto.Text = prod.Preco.ToString();
-            txtPrecoVenda.Text = prod.PrecoVenda.ToString();
-            txtQuantidade.Text = prod.Quantidade.ToString();
-            cmbFornecedor.Text = prod.Fabricante;
+
+            btnCadastrar.Visible = false;
+            btnAlterar.Visible = true;
+            txtID.Text = id;
+            cmbCategoria.Text = categoria;
+            txtNome.Text = descricao;
+            txtPrecoCusto.Text = preco;
+            txtPrecoVenda.Text = precoVenda;
+            txtQuantidade.Text = quantidade;
+            cmbFornecedor.Text = fornecedor;
 
 
         }
@@ -114,6 +120,40 @@ namespace PizzariaWinForm.Formularios
         {
             if ((Char.IsLetter(e.KeyChar)))
                 e.Handled = true;
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtNome.Text != " " && txtPorcentagem.Text != " " && txtPrecoCusto.Text != "" && txtPrecoVenda.Text != "" && txtQuantidade.Text != "")
+            {
+
+                RecebendoValor();
+                prod.Id = int.Parse(txtID.Text);
+                prod.Alterar();
+            }
+
+            
+            var result = MessageBox.Show("Cliente, Alterado com sucesso!", MessageBoxButtons.OK.ToString());
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+
+                EsvaziandoCampos();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
+
+            }
         }
     }
 }

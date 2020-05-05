@@ -52,6 +52,7 @@
             this.txtPorcentagem = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbFornecedor = new System.Windows.Forms.ComboBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel5
@@ -60,14 +61,14 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.Location = new System.Drawing.Point(10, 532);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(380, 10);
+            this.panel5.Size = new System.Drawing.Size(543, 10);
             this.panel5.TabIndex = 31;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(390, 10);
+            this.panel7.Location = new System.Drawing.Point(553, 10);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 532);
             this.panel7.TabIndex = 30;
@@ -87,7 +88,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 10);
+            this.panel3.Size = new System.Drawing.Size(563, 10);
             this.panel3.TabIndex = 28;
             // 
             // btnSair
@@ -99,7 +100,7 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnSair.Location = new System.Drawing.Point(324, 36);
+            this.btnSair.Location = new System.Drawing.Point(460, 16);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(66, 56);
             this.btnSair.TabIndex = 71;
@@ -116,7 +117,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(25, 441);
+            this.btnCadastrar.Location = new System.Drawing.Point(106, 441);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(166, 54);
             this.btnCadastrar.TabIndex = 70;
@@ -133,7 +134,7 @@
             this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(220, 441);
+            this.btnFechar.Location = new System.Drawing.Point(301, 441);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(157, 54);
             this.btnFechar.TabIndex = 69;
@@ -225,7 +226,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.label4.Location = new System.Drawing.Point(66, 67);
+            this.label4.Location = new System.Drawing.Point(112, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(222, 25);
             this.label4.TabIndex = 58;
@@ -261,6 +262,7 @@
             this.cmbCategoria.Name = "cmbCategoria";
             this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
             this.cmbCategoria.TabIndex = 72;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -312,11 +314,30 @@
             this.cmbFornecedor.Size = new System.Drawing.Size(121, 21);
             this.cmbFornecedor.TabIndex = 77;
             // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.Location = new System.Drawing.Point(106, 441);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(166, 54);
+            this.btnAlterar.TabIndex = 78;
+            this.btnAlterar.Text = "Alterar Produto:";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Visible = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // frmCadastroProduto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(400, 542);
+            this.ClientSize = new System.Drawing.Size(563, 542);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.cmbFornecedor);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPorcentagem);
@@ -376,5 +397,6 @@
         private System.Windows.Forms.TextBox txtPorcentagem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbFornecedor;
+        private System.Windows.Forms.Button btnAlterar;
     }
 }

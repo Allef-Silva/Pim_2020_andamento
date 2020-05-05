@@ -20,6 +20,7 @@ namespace PizzariaWinForm.Formularios
         private void RecebendoValor()
         {
 
+            fornecedor.Razao_social = txtRazaoSocial.Text;
             fornecedor.Nome = txtNome.Text;
             fornecedor.Endereco = txtEndereco.Text;
             fornecedor.Telefone = mskTelefone.Text;
@@ -27,15 +28,17 @@ namespace PizzariaWinForm.Formularios
             fornecedor.Numero = int.Parse(txtNumero.Text);
             fornecedor.Obs = rtxtObservacoes.Text;
         }
-        private void RecebendoValorDgv()
+        public void RecebendoValorDgv( string razao_social, string nome, string endereco, string numero, string telefone, string cnpj , string obs)
         {
-
-            txtNome.Text = fornecedor.Nome;
-            txtEndereco.Text = fornecedor.Endereco;
-            mskTelefone.Text = fornecedor.Telefone;
-            txtCnpj.Text = fornecedor.Cnpj;
-            txtNumero.Text = fornecedor.Numero.ToString();
-            rtxtObservacoes.Text = fornecedor.Obs;
+            btnCadastrar.Visible = false;
+            btnAlterar.Visible = true;
+            txtRazaoSocial.Text = razao_social;
+            txtNome.Text = nome;
+            txtEndereco.Text = endereco;
+            mskTelefone.Text = telefone;
+            txtCnpj.Text = cnpj;
+            txtNumero.Text = numero;
+            rtxtObservacoes.Text = obs;
         }
         private void EsvaziandoCampos()
         {
@@ -49,10 +52,13 @@ namespace PizzariaWinForm.Formularios
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (txtCnpj.Text != " " && txtNome.Text != " " && txtEndereco.Text != "" && mskTelefone.Text != "" && txtNumero.Text != "")
+            if (txtCnpj.Text != " " && txtNome.Text != " " && txtEndereco.Text != "" && mskTelefone.Text != "" && txtNumero.Text != "" && txtRazaoSocial.Text != " " && rtxtObservacoes.Text !="") 
             {
 
                 RecebendoValor();
+               
+
+                fornecedor.Cadastrar();
                 var result = MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
 
                 if (result == DialogResult.OK)
@@ -60,8 +66,6 @@ namespace PizzariaWinForm.Formularios
                     this.Close();
 
                 }
-
-                fornecedor.Cadastrar();
                 EsvaziandoCampos();
 
             }
@@ -78,6 +82,34 @@ namespace PizzariaWinForm.Formularios
         {
             if ((Char.IsLetter(e.KeyChar)))
                 e.Handled = true;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtCnpj.Text != " " && txtNome.Text != " " && txtEndereco.Text != "" && mskTelefone.Text != "" && txtNumero.Text != "" && txtRazaoSocial.Text != " " && rtxtObservacoes.Text != "")
+            {
+
+                RecebendoValor();
+
+
+
+                fornecedor.Alterar();
+                var result = MessageBox.Show("Fornecedor Alterado com sucesso!", MessageBoxButtons.OK.ToString());
+
+                if (result == DialogResult.OK)
+                {
+                    this.Close();
+
+                }
+                EsvaziandoCampos();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
+
+            }
         }
     }
 }

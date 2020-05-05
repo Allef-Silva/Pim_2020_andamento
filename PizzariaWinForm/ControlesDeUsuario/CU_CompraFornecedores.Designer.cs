@@ -232,6 +232,7 @@
             this.dgvFornecedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFornecedor.Size = new System.Drawing.Size(1095, 537);
             this.dgvFornecedor.TabIndex = 0;
+            this.dgvFornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedor_CellContentClick);
             // 
             // CU_CompraFornecedores
             // 

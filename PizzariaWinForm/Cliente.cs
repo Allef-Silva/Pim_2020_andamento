@@ -89,30 +89,26 @@ namespace PizzariaWinForm
                 // conexao = null;
                 // comando = null;
             }
-            if (cad == true)
-            {
-                //MessageBox.Show("Cadastrado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
-            else
-            {
-                MessageBox.Show("Tente Novamente!", MessageBoxButtons.OK.ToString());
-            }
+        
 
         }
         public void Alterar()
         {
-            string strSql = "";
+            
+            string strSql = "UPDATE cliente SET nome_cliente='" + nome +
+                "', endereco_cliente= '" + endereco + "', numero_cliente= '" + numero + "' , telefone_cliente= '" + telefone + "', cpf_cliente= '" + cpf + "' where cod_cliente= '" + id + "'";
+            
             try
             {
 
                 comando = new MySqlCommand(strSql, conexao.AbrirBanco());
                 comando.ExecuteNonQuery();
-                cad = true;
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                cad = false;
+               
             }
             finally
             {
@@ -121,10 +117,7 @@ namespace PizzariaWinForm
                 //conexao = null;
                 //comando = null;
             }
-            if (cad == true)
-            {
-                MessageBox.Show("Atualizado com sucesso!", MessageBoxButtons.OK.ToString());
-            }
+        
 
         }
         public void Excluir()

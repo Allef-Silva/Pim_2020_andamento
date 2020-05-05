@@ -15,11 +15,14 @@ namespace PizzariaWinForm.Formularios
         public frmCadastroCliente()
         {
             InitializeComponent();
-            RecebendoValorDgv();
+            
+
+                   
         }
 
+
         Cliente cli = new Cliente();
-        
+
         string mensagem = "Deseja sair do cadastro?";
         string fechar = "fechando cadastro!!";
         private void RecebendoValor()
@@ -30,15 +33,17 @@ namespace PizzariaWinForm.Formularios
             cli.Telefone = mskTelefone.Text;
             cli.CPF = txtCpf.Text;
             cli.Numero = int.Parse(txtNumero.Text);
-        } 
-        private void RecebendoValorDgv()
+        }
+        public void RecebendoValorDgv(string id, string cliente, string endereco, string numero, string telefone, string cpf)
         {
-
-            txtNomeCliente.Text = cli.Nome;
-            txtEndereco.Text = cli.Endereco  ;
-            mskTelefone.Text = cli.Telefone;
-            txtCpf.Text = cli.CPF;
-            txtNumero.Text =  cli.Numero.ToString() ;
+            btnCadastrar.Visible = false;
+            btnAlterar.Visible = true;
+            txtId.Text = id;
+            txtNomeCliente.Text = cliente;
+            txtEndereco.Text = endereco;
+            mskTelefone.Text = telefone;
+            txtCpf.Text = cpf;
+            txtNumero.Text = numero;
         }
         private void EsvaziandoCampos()
         {
@@ -71,7 +76,7 @@ namespace PizzariaWinForm.Formularios
                 EsvaziandoCampos();
 
             }
-                                              
+
             else
             {
                 MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
@@ -79,7 +84,7 @@ namespace PizzariaWinForm.Formularios
             }
 
         }
-        
+
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -119,7 +124,42 @@ namespace PizzariaWinForm.Formularios
             if ((Char.IsLetter(e.KeyChar)))
                 e.Handled = true;
         }
-       
 
+        private void frmCadastroCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            if (txtCpf.Text != " " && txtNomeCliente.Text != " " && txtEndereco.Text != "" && mskTelefone.Text != "" && txtNumero.Text != "")
+            {
+
+                RecebendoValor();
+                cli.Id = int.Parse(txtId.Text);
+                cli.Alterar();
+
+            }
+
+            
+            var result = MessageBox.Show("Cliente, Alterado com sucesso!", MessageBoxButtons.OK.ToString());
+
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+
+                EsvaziandoCampos();
+
+            }
+
+            else
+            {
+                MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
+
+            }
+
+
+        }
     }
 }
+
