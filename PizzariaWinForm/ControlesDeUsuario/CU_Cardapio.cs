@@ -19,7 +19,7 @@ namespace PizzariaWinForm.ControlesDeUsuario
      
         private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
         {
-            using (Formularios.frmCadastroPizzas ab = new Formularios.frmCadastroPizzas())
+            using (Formularios.frmVendas ab = new Formularios.frmVendas())
             {
                 ab.ShowDialog();
             }

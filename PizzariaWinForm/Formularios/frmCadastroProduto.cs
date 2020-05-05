@@ -155,6 +155,30 @@ namespace PizzariaWinForm.Formularios
 
             }
         }
+
+        private void txtPorcentagem_TextChanged(object sender, EventArgs e)
+        {
+            float porcentagem = 0;
+            float total = 0;
+
+            float precoCusto = 0;
+            if (txtPorcentagem.Text != "")
+            {
+                porcentagem = float.Parse(txtPorcentagem.Text);
+            }
+            if (txtPrecoCusto.Text != "") {
+
+                precoCusto = float.Parse(txtPrecoCusto.Text);
+            }
+                
+
+                porcentagem += 100;
+                total = (porcentagem / 100) * precoCusto;
+
+                txtPrecoVenda.Text = total.ToString("F2");
+            
+
+        }
     }
 }
 

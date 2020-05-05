@@ -31,7 +31,6 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroCliente.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroEstoque.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroFim.resources
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroPizzas.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.frmLogin.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.frmMenu.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmNovoFornecedor.resources
@@ -42,3 +41,4 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csproj.CopyComplete
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.exe
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.pdb
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmVendas.resources

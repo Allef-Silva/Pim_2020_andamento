@@ -293,6 +293,7 @@
             this.txtPorcentagem.Name = "txtPorcentagem";
             this.txtPorcentagem.Size = new System.Drawing.Size(212, 20);
             this.txtPorcentagem.TabIndex = 75;
+            this.txtPorcentagem.TextChanged += new System.EventHandler(this.txtPorcentagem_TextChanged);
             this.txtPorcentagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorcentagem_KeyPress);
             // 
             // label9
