@@ -138,3 +138,4 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources
 =======
 >>>>>>> d144908ba5d1dcd089faa9a892f95cf2027f0b03
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources
