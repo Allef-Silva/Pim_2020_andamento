@@ -166,7 +166,7 @@ namespace PizzariaWinForm
            
             {
                 labelTime.Text = DateTime.Now.ToString("hh:mm:ss ");
-                
+                lblData.Text = DateTime.Now.ToLongDateString();
             }
 
         }
@@ -234,6 +234,11 @@ namespace PizzariaWinForm
         private void btnSair_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblData_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -412,6 +412,7 @@
             this.lblData.Size = new System.Drawing.Size(326, 40);
             this.lblData.TabIndex = 71;
             this.lblData.Text = "Sexta, 01 Abril 2020";
+            this.lblData.Click += new System.EventHandler(this.lblData_Click);
             // 
             // label6
             // 

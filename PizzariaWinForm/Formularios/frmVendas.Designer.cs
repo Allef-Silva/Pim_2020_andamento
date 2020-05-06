@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendas));
             this.btnSair = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -56,7 +57,11 @@
             this.txtTipo = new System.Windows.Forms.TextBox();
             this.rbBroto = new System.Windows.Forms.RadioButton();
             this.rbInteira = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSair
@@ -68,9 +73,9 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.btnSair.Location = new System.Drawing.Point(777, 25);
+            this.btnSair.Location = new System.Drawing.Point(837, 16);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(66, 56);
+            this.btnSair.Size = new System.Drawing.Size(31, 29);
             this.btnSair.TabIndex = 55;
             this.btnSair.Text = "X";
             this.btnSair.UseVisualStyleBackColor = false;
@@ -125,9 +130,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.label7.Location = new System.Drawing.Point(595, 204);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 19);
+            this.label7.Size = new System.Drawing.Size(49, 19);
             this.label7.TabIndex = 51;
-            this.label7.Text = "Total";
+            this.label7.Text = "Total:";
             // 
             // txtQuantidade
             // 
@@ -313,9 +318,9 @@
             this.Preco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.Preco.Location = new System.Drawing.Point(420, 204);
             this.Preco.Name = "Preco";
-            this.Preco.Size = new System.Drawing.Size(53, 19);
+            this.Preco.Size = new System.Drawing.Size(57, 19);
             this.Preco.TabIndex = 63;
-            this.Preco.Text = "Preco";
+            this.Preco.Text = "Preco:";
             // 
             // Tipo
             // 
@@ -324,9 +329,9 @@
             this.Tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.Tipo.Location = new System.Drawing.Point(348, 151);
             this.Tipo.Name = "Tipo";
-            this.Tipo.Size = new System.Drawing.Size(41, 19);
+            this.Tipo.Size = new System.Drawing.Size(45, 19);
             this.Tipo.TabIndex = 65;
-            this.Tipo.Text = "Tipo";
+            this.Tipo.Text = "Tipo:";
             // 
             // txtTipo
             // 
@@ -360,11 +365,46 @@
             this.rbInteira.UseVisualStyleBackColor = true;
             this.rbInteira.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(37, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(89, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 82;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(33, 69);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(106, 23);
+            this.label10.TabIndex = 83;
+            this.label10.Text = "Pizza Fácil";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(51, 92);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(61, 17);
+            this.label11.TabIndex = 84;
+            this.label11.Text = "Pizzarias";
+            // 
             // frmVendas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 644);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.rbInteira);
             this.Controls.Add(this.rbBroto);
             this.Controls.Add(this.Tipo);
@@ -398,6 +438,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Pizzas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,5 +473,8 @@
         private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.RadioButton rbBroto;
         private System.Windows.Forms.RadioButton rbInteira;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }

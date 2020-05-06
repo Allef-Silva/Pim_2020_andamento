@@ -42,17 +42,6 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.exe
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.pdb
 <<<<<<< HEAD
-<<<<<<< HEAD
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\PizzariaWinForm.exe.config
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\PizzariaWinForm.exe
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\PizzariaWinForm.pdb
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\MySql.Data.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Google.Protobuf.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\BouncyCastle.Crypto.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Ubiety.Dns.Core.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Renci.SshNet.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\MySql.Data.xml
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csproj.CopyComplete
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Google.Protobuf.dll
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\Allef\Desktop\PIM2020\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Ubiety.Dns.Core.dll
@@ -96,22 +85,15 @@ C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinF
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.exe
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.pdb
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csprojAssemblyReference.cache
-<<<<<<< HEAD
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.dll
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.pdb
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.xml
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.pdb
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.WinForms.xml
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.pdb
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\LiveCharts.Wpf.xml
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources
 =======
 >>>>>>> d144908ba5d1dcd089faa9a892f95cf2027f0b03
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources
-=======
 >>>>>>> ec0600127ceaaebc4b6eb934edbf53c9bd06940e
-=======
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmVendas.resources
 >>>>>>> 43e82cbd53731abfb0505e77817c9cd9bccc28a4
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Google.Protobuf.dll
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\bin\Debug\Renci.SshNet.dll
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\bin\Debug\MySql.Data.xml
+C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmVendas.resources
