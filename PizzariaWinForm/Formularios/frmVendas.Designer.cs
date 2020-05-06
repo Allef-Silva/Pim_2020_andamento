@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -50,25 +50,31 @@
             this.cmbProduto = new System.Windows.Forms.ComboBox();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.mskData = new System.Windows.Forms.MaskedTextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.Preco = new System.Windows.Forms.Label();
+            this.Tipo = new System.Windows.Forms.Label();
+            this.txtTipo = new System.Windows.Forms.TextBox();
+            this.rbBroto = new System.Windows.Forms.RadioButton();
+            this.rbInteira = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // btnSair
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.button3.Location = new System.Drawing.Point(777, 25);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(66, 56);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSair.BackColor = System.Drawing.Color.White;
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Georgia", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.btnSair.Location = new System.Drawing.Point(777, 25);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(66, 56);
+            this.btnSair.TabIndex = 55;
+            this.btnSair.Text = "X";
+            this.btnSair.UseVisualStyleBackColor = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // button2
             // 
@@ -86,27 +92,27 @@
             this.button2.Text = "Adicionar a lista";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnFechar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(686, 553);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 54);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Fechar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnFechar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnFechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFechar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(686, 553);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(157, 54);
+            this.btnFechar.TabIndex = 53;
+            this.btnFechar.Text = "Fechar";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txtTotal
             // 
             this.txtTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.txtTotal.Location = new System.Drawing.Point(471, 200);
+            this.txtTotal.Location = new System.Drawing.Point(658, 203);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(110, 20);
             this.txtTotal.TabIndex = 52;
@@ -117,7 +123,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.label7.Location = new System.Drawing.Point(404, 200);
+            this.label7.Location = new System.Drawing.Point(595, 204);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 19);
             this.label7.TabIndex = 51;
@@ -159,7 +165,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.label3.Location = new System.Drawing.Point(393, 153);
+            this.label3.Location = new System.Drawing.Point(92, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 19);
             this.label3.TabIndex = 45;
@@ -170,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
-            this.label2.Location = new System.Drawing.Point(99, 153);
+            this.label2.Location = new System.Drawing.Point(464, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 43;
@@ -270,15 +276,16 @@
             // cmbProduto
             // 
             this.cmbProduto.FormattingEnabled = true;
-            this.cmbProduto.Location = new System.Drawing.Point(471, 153);
+            this.cmbProduto.Location = new System.Drawing.Point(181, 151);
             this.cmbProduto.Name = "cmbProduto";
             this.cmbProduto.Size = new System.Drawing.Size(121, 21);
             this.cmbProduto.TabIndex = 59;
+            this.cmbProduto.SelectedIndexChanged += new System.EventHandler(this.cmbProduto_SelectedIndexChanged);
             // 
             // cmbCliente
             // 
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(177, 155);
+            this.cmbCliente.Location = new System.Drawing.Point(551, 108);
             this.cmbCliente.Name = "cmbCliente";
             this.cmbCliente.Size = new System.Drawing.Size(121, 21);
             this.cmbCliente.TabIndex = 60;
@@ -291,19 +298,87 @@
             this.mskData.Size = new System.Drawing.Size(100, 20);
             this.mskData.TabIndex = 61;
             // 
+            // txtPreco
+            // 
+            this.txtPreco.Location = new System.Drawing.Point(489, 204);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 20);
+            this.txtPreco.TabIndex = 62;
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
+            // 
+            // Preco
+            // 
+            this.Preco.AutoSize = true;
+            this.Preco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Preco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.Preco.Location = new System.Drawing.Point(420, 204);
+            this.Preco.Name = "Preco";
+            this.Preco.Size = new System.Drawing.Size(53, 19);
+            this.Preco.TabIndex = 63;
+            this.Preco.Text = "Preco";
+            // 
+            // Tipo
+            // 
+            this.Tipo.AutoSize = true;
+            this.Tipo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
+            this.Tipo.Location = new System.Drawing.Point(348, 151);
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Size = new System.Drawing.Size(41, 19);
+            this.Tipo.TabIndex = 65;
+            this.Tipo.Text = "Tipo";
+            // 
+            // txtTipo
+            // 
+            this.txtTipo.Location = new System.Drawing.Point(395, 153);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(100, 20);
+            this.txtTipo.TabIndex = 64;
+            this.txtTipo.TextChanged += new System.EventHandler(this.txtTipo_TextChanged);
+            // 
+            // rbBroto
+            // 
+            this.rbBroto.AutoSize = true;
+            this.rbBroto.Location = new System.Drawing.Point(551, 152);
+            this.rbBroto.Name = "rbBroto";
+            this.rbBroto.Size = new System.Drawing.Size(50, 17);
+            this.rbBroto.TabIndex = 66;
+            this.rbBroto.TabStop = true;
+            this.rbBroto.Text = "Broto";
+            this.rbBroto.UseVisualStyleBackColor = true;
+            this.rbBroto.Visible = false;
+            // 
+            // rbInteira
+            // 
+            this.rbInteira.AutoSize = true;
+            this.rbInteira.Location = new System.Drawing.Point(642, 151);
+            this.rbInteira.Name = "rbInteira";
+            this.rbInteira.Size = new System.Drawing.Size(54, 17);
+            this.rbInteira.TabIndex = 67;
+            this.rbInteira.TabStop = true;
+            this.rbInteira.Text = "Inteira";
+            this.rbInteira.UseVisualStyleBackColor = true;
+            this.rbInteira.Visible = false;
+            // 
             // frmVendas
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(884, 644);
+            this.Controls.Add(this.rbInteira);
+            this.Controls.Add(this.rbBroto);
+            this.Controls.Add(this.Tipo);
+            this.Controls.Add(this.txtTipo);
+            this.Controls.Add(this.Preco);
+            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.mskData);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.cmbProduto);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSair);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtQuantidade);
@@ -329,9 +404,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtQuantidade;
@@ -351,5 +426,11 @@
         private System.Windows.Forms.ComboBox cmbProduto;
         private System.Windows.Forms.ComboBox cmbCliente;
         private System.Windows.Forms.MaskedTextBox mskData;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.Label Preco;
+        private System.Windows.Forms.Label Tipo;
+        private System.Windows.Forms.TextBox txtTipo;
+        private System.Windows.Forms.RadioButton rbBroto;
+        private System.Windows.Forms.RadioButton rbInteira;
     }
 }

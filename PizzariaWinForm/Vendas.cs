@@ -205,10 +205,10 @@ namespace PizzariaWinForm
 
         }
 
-        public void PreencherText(ComboBox box, TextBox texto)
+        public void PreencherText(ComboBox cmbproduto, TextBox txtpreco, TextBox txttipo)
         {
             
-            string strPtext = "select *from produto where descricao='" + box.Text + "'";
+            string strPtext = "select *from produto where descricao='" + cmbproduto.Text + "'";
             comando = new MySqlCommand(strPtext, conexao.AbrirBanco());
             comando.ExecuteNonQuery();
             MySqlDataReader dr;
@@ -216,8 +216,9 @@ namespace PizzariaWinForm
             while (dr.Read())
             {
                 string preco = (string)dr["preco"].ToString();
-                texto.Text = preco;
-
+                txtpreco.Text = preco;
+                string tipo = (string)dr["categoria"].ToString();
+                txttipo.Text = tipo;
 
             }
 
@@ -279,6 +280,6 @@ namespace PizzariaWinForm
             }
 
         }
-
+    
     }
 }

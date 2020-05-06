@@ -29,12 +29,21 @@ namespace PizzariaWinForm.Formularios
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show(mensagem, fechar,
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
+            }
+
         }
 
 
         private void RecebendoValor()
         {
+          
 
             prod.Descricao = txtNome.Text;
             prod.Preco = double.Parse(txtPrecoCusto.Text);
@@ -67,6 +76,8 @@ namespace PizzariaWinForm.Formularios
             txtQuantidade.Text = "";
             cmbFornecedor.Text = "";
         }
+        string mensagem = "Deseja sair do cadastro?";
+        string fechar = "fechando cadastro!!";
 
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -177,6 +188,19 @@ namespace PizzariaWinForm.Formularios
 
                 txtPrecoVenda.Text = total.ToString("F2");
             
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(mensagem, fechar,
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
+            }
 
         }
     }

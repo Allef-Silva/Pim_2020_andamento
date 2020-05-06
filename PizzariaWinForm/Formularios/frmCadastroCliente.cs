@@ -90,14 +90,10 @@ namespace PizzariaWinForm.Formularios
         {
 
             var result = MessageBox.Show(mensagem, fechar,
-                                MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question);
+                              MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Question);
 
-            if (result == DialogResult.No)
-            {
-
-            }
-            else
+            if (result != DialogResult.No)
             {
                 this.Close();
             }
@@ -109,14 +105,11 @@ namespace PizzariaWinForm.Formularios
                              MessageBoxButtons.YesNo,
                              MessageBoxIcon.Question);
 
-            if (result == DialogResult.No)
-            {
-
-            }
-            else
+            if (result != DialogResult.No  )
             {
                 this.Close();
             }
+          
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)

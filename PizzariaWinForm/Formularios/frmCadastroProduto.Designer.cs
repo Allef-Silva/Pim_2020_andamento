@@ -140,6 +140,7 @@
             this.btnFechar.TabIndex = 69;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txtPrecoVenda
             // 
