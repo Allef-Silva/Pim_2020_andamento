@@ -152,11 +152,11 @@
     <Compile Include="Formularios\frmCadastroFim.Designer.cs">
       <DependentUpon>frmCadastroFim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\frmCadastroPizzas.cs">
+    <Compile Include="Formularios\frmVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\frmCadastroPizzas.Designer.cs">
-      <DependentUpon>frmCadastroPizzas.cs</DependentUpon>
+    <Compile Include="Formularios\frmVendas.Designer.cs">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmLogin.cs">
       <SubType>Form</SubType>
@@ -237,8 +237,8 @@
     <EmbeddedResource Include="Formularios\frmCadastroFim.resx">
       <DependentUpon>frmCadastroFim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmCadastroPizzas.resx">
-      <DependentUpon>frmCadastroPizzas.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\frmVendas.resx">
+      <DependentUpon>frmVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

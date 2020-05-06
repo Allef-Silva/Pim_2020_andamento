@@ -49,6 +49,8 @@ namespace PizzariaWinForm.Formularios
             rtxtObservacoes.Text = "";
             txtNumero.Clear();
         }
+        string mensagem = "Deseja sair do cadastro?";
+        string fechar = "fechando cadastro!!";
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -109,6 +111,30 @@ namespace PizzariaWinForm.Formularios
             {
                 MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
 
+            }
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(mensagem, fechar,
+                         MessageBoxButtons.YesNo,
+                         MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(mensagem, fechar,
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
             }
         }
     }

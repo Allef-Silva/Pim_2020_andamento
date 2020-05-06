@@ -133,7 +133,7 @@
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnAtualizar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAz5JREFUaEPt
         Wb1rFEEcvagISqKCH6hY+AHaCArWFjaComBtHYkKFjF/gQgWInYRFLGyUuzsElQuaMTC+IE2KTzBIiok
@@ -151,6 +151,19 @@
         HgB/Zl6X7uJCluUV3E+/dPPgAvqsvF+lAgrfxs0+lYidTyaOGNbZbrnuSZHsL1A86YNvNTYR7oLI9R8w
         kD0A0aeWUsdFajCAkbQBPE+pp4X5FxUR7caOsj8J+cvcP7NNlvi/Uan8ATYddW09d8XtAAAAAElFTkSu
         QmCC
+</value>
+  </data>
+  <data name="btnAddVenda.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAbNJREFUaEPt
+        1t0qhFEUxvE5MeOAG+ACuB+uQVNKlHIdXAL3wSEhpZw7nwMHkq8Tnnfef3soa95Fy54t+1ertHrWWntK
+        TK+qqqpMbx2IhWGtiZgfcyZiYVhrIubHnIlYGNaaiPkxZyIWhrUmYn7MJbQ7KdpXDVUXqjvqXLWhmiPW
+        SdlPaPsxl9CeSrFl1dV44GuXqiXiU7XxCdp+zCW0TYrMq67H4emaDzhgzNRGJ2j7MZfQNimy0yZdthgz
+        kUto/x7daH7nvc4YK4ce9dC+zeWesXLoUX/+AzR/Kr1OGSuHHrXZvs1lyFg59KiByvtntM9YWfSwsH9k
+        M6MHfvwq8Ux9+6tE9e/o12NRta46UJ2oblQjqvn5WLWvWlMtMDZ7esyq6kj1pPJ6VB2qVlgzG3rAnupV
+        9VMvql3W5aXD2+MnxOj8dhpOR2/b2yFGrM2Hw2FYmw93w7A2H+6GYW0+3A3D2ny4G4a1cdib0M6Gswlt
+        P+YS2tlwNqHtx1xCOxvOJrT9mEtoZ8PZhLYfcyZiYVhrIubHnIlYGNaaiPkxZyIWhrUmYn7MmYiFYa2J
+        WFVVVVF6vXfp8dLcUKkPTQAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

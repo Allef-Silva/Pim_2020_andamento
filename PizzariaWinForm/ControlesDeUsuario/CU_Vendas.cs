@@ -16,5 +16,26 @@ namespace PizzariaWinForm.ControlesDeUsuario
         {
             InitializeComponent();
         }
+        Vendas vend = new Vendas();
+        private void btnAddVenda_Click(object sender, EventArgs e)
+        {
+            using (Formularios.frmVendas abn = new Formularios.frmVendas())
+            {
+                abn.ShowDialog();
+
+            }
+        }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            vend.Dados = dgvVenda;
+
+            vend.Listar();
+        }
+
+        private void dgvVenda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

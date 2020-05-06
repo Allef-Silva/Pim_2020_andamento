@@ -31,7 +31,6 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroCliente.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroEstoque.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroFim.resources
-F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroPizzas.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.frmLogin.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.frmMenu.resources
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmNovoFornecedor.resources
@@ -42,6 +41,7 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.csproj.CopyComplete
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.exe
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.pdb
+<<<<<<< HEAD
 <<<<<<< HEAD
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\PizzariaWinForm.exe.config
 F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\bin\Debug\PizzariaWinForm.exe
@@ -112,3 +112,6 @@ F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\
 C:\Users\Allef\Desktop\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmCadastroProduto.resources
 =======
 >>>>>>> ec0600127ceaaebc4b6eb934edbf53c9bd06940e
+=======
+F:\Users\PC\Desktop\PIM_2020_final_andamento\Pim_2020_andamento\PizzariaWinForm\obj\Debug\PizzariaWinForm.Formularios.frmVendas.resources
+>>>>>>> 43e82cbd53731abfb0505e77817c9cd9bccc28a4

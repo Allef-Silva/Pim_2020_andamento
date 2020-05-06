@@ -29,12 +29,21 @@ namespace PizzariaWinForm.Formularios
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show(mensagem, fechar,
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
+            }
+
         }
 
 
         private void RecebendoValor()
         {
+          
 
             prod.Descricao = txtNome.Text;
             prod.Preco = double.Parse(txtPrecoCusto.Text);
@@ -67,6 +76,8 @@ namespace PizzariaWinForm.Formularios
             txtQuantidade.Text = "";
             cmbFornecedor.Text = "";
         }
+        string mensagem = "Deseja sair do cadastro?";
+        string fechar = "fechando cadastro!!";
 
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -154,6 +165,43 @@ namespace PizzariaWinForm.Formularios
                 MessageBox.Show("Os campos devem ser preenchidos!!", MessageBoxButtons.OK.ToString());
 
             }
+        }
+
+        private void txtPorcentagem_TextChanged(object sender, EventArgs e)
+        {
+            float porcentagem = 0;
+            float total = 0;
+
+            float precoCusto = 0;
+            if (txtPorcentagem.Text != "")
+            {
+                porcentagem = float.Parse(txtPorcentagem.Text);
+            }
+            if (txtPrecoCusto.Text != "") {
+
+                precoCusto = float.Parse(txtPrecoCusto.Text);
+            }
+                
+
+                porcentagem += 100;
+                total = (porcentagem / 100) * precoCusto;
+
+                txtPrecoVenda.Text = total.ToString("F2");
+            
+
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show(mensagem, fechar,
+                           MessageBoxButtons.YesNo,
+                           MessageBoxIcon.Question);
+
+            if (result != DialogResult.No)
+            {
+                this.Close();
+            }
+
         }
     }
 }

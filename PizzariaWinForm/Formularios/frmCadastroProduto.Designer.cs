@@ -140,6 +140,7 @@
             this.btnFechar.TabIndex = 69;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txtPrecoVenda
             // 
@@ -293,6 +294,7 @@
             this.txtPorcentagem.Name = "txtPorcentagem";
             this.txtPorcentagem.Size = new System.Drawing.Size(212, 20);
             this.txtPorcentagem.TabIndex = 75;
+            this.txtPorcentagem.TextChanged += new System.EventHandler(this.txtPorcentagem_TextChanged);
             this.txtPorcentagem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPorcentagem_KeyPress);
             // 
             // label9

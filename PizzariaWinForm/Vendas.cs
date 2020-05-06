@@ -64,6 +64,119 @@ namespace PizzariaWinForm
         MySqlDataAdapter da;
         dbConc conexao = new dbConc();
 
+        private DataGridView dados;
+
+
+
+        public DataGridView Dados
+        {
+            get { return dados; }
+            set { dados = value; }
+        }
+
+
+        bool cad = false;
+        public void Cadastrar()
+        {
+            string strSql = "INSERT INTO cliente (nome_cliente, endereco_cliente, numero_cliente ,telefone_cliente, cpf_cliente) " +
+                   "VALUES ";
+
+            try
+            {
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cad = false;
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+                // conexao = null;
+                // comando = null;
+            }
+
+
+        }
+        public void Alterar()
+        {
+
+            string strSql = "UPDATE cliente SET nome_cliente='" ;
+
+            try
+            {
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+
+                //conexao = null;
+                //comando = null;
+            }
+
+
+        }
+        public void Excluir()
+        {
+            string strSql = "a";
+            try
+            {
+
+                comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+                comando.ExecuteNonQuery();
+                cad = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cad = false;
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+                //conexao = null;
+                //comando = null;
+            }
+
+
+
+        }
+        public void Listar()
+        {
+            string strSql = "select cod_cliente as Cliente, nome_cliente as Nome, endereco_cliente as Endereco, numero_cliente as Numero, telefone_cliente as Telefone, cpf_cliente as CPF  from cliente"; ;
+            comando = new MySqlCommand(strSql, conexao.AbrirBanco());
+
+            try
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
+
+                DataTable dtLista = new DataTable();
+                DataSet ds = new DataSet();
+                da.Fill(dtLista);
+
+
+                dados.DataSource = dtLista;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro" + ex);
+            }
+        }
+
         public void PreencherProduto(ComboBox box)
         {
 
@@ -92,10 +205,10 @@ namespace PizzariaWinForm
 
         }
 
-        public void PreencherText(ComboBox box, TextBox texto)
+        public void PreencherText(ComboBox cmbproduto, TextBox txtpreco, TextBox txttipo)
         {
             
-            string strPtext = "select *from produto where descricao='" + box.Text + "'";
+            string strPtext = "select *from produto where descricao='" + cmbproduto.Text + "'";
             comando = new MySqlCommand(strPtext, conexao.AbrirBanco());
             comando.ExecuteNonQuery();
             MySqlDataReader dr;
@@ -103,8 +216,9 @@ namespace PizzariaWinForm
             while (dr.Read())
             {
                 string preco = (string)dr["preco"].ToString();
-                texto.Text = preco;
-
+                txtpreco.Text = preco;
+                string tipo = (string)dr["categoria"].ToString();
+                txttipo.Text = tipo;
 
             }
 
@@ -138,6 +252,34 @@ namespace PizzariaWinForm
             }
 
         }
+        public void PreencherFornecedor(ComboBox comboBox)
+        {
 
+
+            try
+            {
+                string tbFornecedor = "select *from produto";
+                comando = new MySqlCommand(tbFornecedor, conexao.AbrirBanco());
+                DataSet ds = new DataSet();
+                da = new MySqlDataAdapter(comando);
+                da.Fill(ds);
+                comboBox.DataSource = ds.Tables[0];
+                comboBox.DisplayMember = "descricao";
+                comboBox.ValueMember = "id_produto";
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.FecharBanco(conexao.AbrirBanco());
+            }
+
+        }
+    
     }
 }
