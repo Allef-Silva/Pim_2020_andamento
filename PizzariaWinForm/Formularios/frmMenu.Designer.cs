@@ -338,6 +338,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.button2);
             this.panel5.Controls.Add(this.label1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -407,7 +408,7 @@
             this.lblData.BackColor = System.Drawing.Color.Transparent;
             this.lblData.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.White;
-            this.lblData.Location = new System.Drawing.Point(786, 35);
+            this.lblData.Location = new System.Drawing.Point(541, 33);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(326, 40);
             this.lblData.TabIndex = 71;

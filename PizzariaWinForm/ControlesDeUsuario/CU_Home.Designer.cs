@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label3 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -53,8 +52,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblhora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pieChart1 = new LiveCharts.WinForms.PieChart();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -63,18 +60,6 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TableVendas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(628, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(215, 21);
-            this.label3.TabIndex = 79;
-            this.label3.Text = "Gráficos Diários e Mensais :";
             // 
             // panel5
             // 
@@ -216,7 +201,7 @@
             this.lblData.BackColor = System.Drawing.Color.Transparent;
             this.lblData.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.lblData.Location = new System.Drawing.Point(602, 487);
+            this.lblData.Location = new System.Drawing.Point(584, 488);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(326, 40);
             this.lblData.TabIndex = 70;
@@ -233,24 +218,24 @@
             this.TableVendas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.TableVendas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.TableVendas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TableVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TableVendas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.TableVendas.ColumnHeadersHeight = 30;
             this.TableVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TableVendas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TableVendas.DefaultCellStyle = dataGridViewCellStyle6;
             this.TableVendas.EnableHeadersVisualStyles = false;
             this.TableVendas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.TableVendas.Location = new System.Drawing.Point(53, 254);
@@ -329,30 +314,12 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pieChart1
-            // 
-            this.pieChart1.Location = new System.Drawing.Point(609, 68);
-            this.pieChart1.Name = "pieChart1";
-            this.pieChart1.Size = new System.Drawing.Size(200, 100);
-            this.pieChart1.TabIndex = 81;
-            this.pieChart1.Text = "pieChart1";
-            // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Location = new System.Drawing.Point(865, 68);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(200, 100);
-            this.cartesianChart1.TabIndex = 82;
-            this.cartesianChart1.Text = "cartesianChart1";
-            // 
             // CU_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.Controls.Add(this.cartesianChart1);
-            this.Controls.Add(this.pieChart1);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel9);
@@ -387,8 +354,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
@@ -410,7 +375,5 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer timer1;
-        private LiveCharts.WinForms.PieChart pieChart1;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
