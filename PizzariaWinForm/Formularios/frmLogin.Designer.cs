@@ -228,6 +228,7 @@
             // frmLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 681);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label6);

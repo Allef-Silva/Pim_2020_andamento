@@ -57,7 +57,7 @@ namespace PizzariaWinForm
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            moveSidePanel(btnSair);
+        
         }
 
         private void timer1_Tick(object sender, EventArgs e)

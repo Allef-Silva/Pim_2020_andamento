@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.painelEsquerda = new System.Windows.Forms.Panel();
             this.btnCadastrarFunc = new System.Windows.Forms.Button();
-            this.btnSair = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,6 @@
             // 
             this.painelEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.painelEsquerda.Controls.Add(this.btnCadastrarFunc);
-            this.painelEsquerda.Controls.Add(this.btnSair);
             this.painelEsquerda.Controls.Add(this.btnHome);
             this.painelEsquerda.Controls.Add(this.button1);
             this.painelEsquerda.Controls.Add(this.pictureBox1);
@@ -107,23 +105,6 @@
             this.btnCadastrarFunc.Text = "        Cadastrar \r\n        Usuários";
             this.btnCadastrarFunc.UseVisualStyleBackColor = true;
             this.btnCadastrarFunc.Click += new System.EventHandler(this.btnCadastrarFunc_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(12, 734);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(188, 54);
-            this.btnSair.TabIndex = 20;
-            this.btnSair.Text = "        Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click_1);
             // 
             // btnHome
             // 
@@ -373,9 +354,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(6)))), ((int)(((byte)(6)))));
             this.label1.Location = new System.Drawing.Point(17, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 23);
+            this.label1.Size = new System.Drawing.Size(366, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Pizza Fácil Pizzaria, Sorocaba,SP (Matriz)";
+            this.label1.Text = "Rede Pizza Fácil , Sorocaba,SP (Matriz)";
             // 
             // timer1
             // 
@@ -402,17 +383,17 @@
             // 
             // lblData
             // 
-            this.lblData.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lblData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblData.AutoEllipsis = true;
             this.lblData.AutoSize = true;
             this.lblData.BackColor = System.Drawing.Color.Transparent;
             this.lblData.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblData.ForeColor = System.Drawing.Color.White;
-            this.lblData.Location = new System.Drawing.Point(541, 33);
+            this.lblData.Location = new System.Drawing.Point(534, 47);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(326, 40);
+            this.lblData.Size = new System.Drawing.Size(578, 40);
             this.lblData.TabIndex = 71;
-            this.lblData.Text = "Sexta, 01 Abril 2020";
+            this.lblData.Text = "quinta-feira, 01 de dezembro 2020";
             this.lblData.Click += new System.EventHandler(this.lblData_Click);
             // 
             // label6
@@ -420,7 +401,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(226, 50);
+            this.label6.Location = new System.Drawing.Point(134, 50);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 11;
@@ -431,7 +412,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(226, 24);
+            this.label5.Location = new System.Drawing.Point(134, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(155, 23);
             this.label5.TabIndex = 10;
@@ -442,7 +423,7 @@
             this.labelUsuario.AutoSize = true;
             this.labelUsuario.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelUsuario.Location = new System.Drawing.Point(95, 24);
+            this.labelUsuario.Location = new System.Drawing.Point(3, 24);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(125, 23);
             this.labelUsuario.TabIndex = 9;
@@ -453,7 +434,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(136, 50);
+            this.label4.Location = new System.Drawing.Point(44, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 23);
             this.label4.TabIndex = 8;
@@ -474,6 +455,7 @@
             // 
             // panelControls
             // 
+            this.panelControls.BackColor = System.Drawing.Color.White;
             this.panelControls.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControls.Location = new System.Drawing.Point(200, 138);
             this.panelControls.Name = "panelControls";
@@ -540,7 +522,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrarFunc;
-        private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblData;
     }
 }
